@@ -1,13 +1,131 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>calc-precio</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">calc-precio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+html
+<ion-content fullscreen>
+  <div class="top2">
+    <img src="assets/top2.png" alt="" />
+  </div>
+  <div class="mainPrecio">
+    <h2 class="labels">
+      Compras
+      <ion-button
+        class="infoButton"
+        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
+      >
+        i
+      </ion-button>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        (ionInput)="handleChangeCompras($event.target.value)"
+        [value]="compras"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+    <h2 class="labels">
+      Gastos
+      <ion-button
+        class="infoButton"
+        (click)="handleInfoClick('Aquí debemos poder el costo de los servicios u gastos referidos al producto, no tienen factura')"
+      >
+        i
+      </ion-button>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        (ionInput)="handleChangeGastos($event.target.value)"
+        [value]="gastos"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+    <h2 class="labels">
+      Ganancia 1
+      <ion-button
+        class="infoButton"
+        (click)="handleInfoClick('Aquí poner el monto en soles del calculo de ganancia en obtenido en el cálculo anterior')"
+      >
+        i
+      </ion-button>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        (ionInput)="handleChangeGanancia1($event.target.value)"
+        [value]="ganancia1"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+    <h2 class="labels">
+      IGV
+      <ion-button
+        class="infoButton"
+        (click)="handleInfoClick('Sub total mas IGV')"
+      >
+        i
+      </ion-button>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        [value]="igv"
+        readonly
+        disabled="true"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+    <h2 class="labels">
+      Precio
+      <ion-button
+        class="infoButton"
+        (click)="handleInfoClick('Precio que debo cobrar')"
+      >
+        i
+      </ion-button>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        [value]="precio"
+        readonly
+        disabled="true"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+    <h2 class="labels">
+      Ganancia 2
+      <ion-button
+        class="infoButton"
+        (click)="handleInfoClick('Crédito fiscal – igv a pagar')"
+      >
+        i
+      </ion-button>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        [value]="ganancia2"
+        readonly
+        disabled="true"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+  </div>
+  <ion-popover [isOpen]="showPopover">
+    <ion-content class="ion-padding">{{ popoverContent }}</ion-content>
+  </ion-popover>
+  <ion-button class="button" expand="block" (click)="handleReset()">
+    Reiniciar
+  </ion-button>
 </ion-content>

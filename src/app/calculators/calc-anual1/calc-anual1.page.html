@@ -5,9 +5,7 @@
   <div class="main2">
     <h2 class="labels">Total de Ventas</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-total"
@@ -19,9 +17,7 @@
     </ion-item>
     <h2 class="labels">IGV a Pagar (Ventas)</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-igv"
@@ -33,9 +29,7 @@
     </ion-item>
     <h2 class="labels">Sub Total (Ventas)</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-venta"
@@ -47,9 +41,7 @@
     </ion-item>
     <h2 class="labels">Total de Compras</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-compra"
@@ -61,9 +53,7 @@
     </ion-item>
     <h2 class="labels">IGV/CRED. Fiscal</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-igv"
@@ -75,9 +65,7 @@
     </ion-item>
     <h2 class="labels">Sub Total de Compras</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-total"
@@ -87,9 +75,7 @@
     </ion-item>
     <h2 class="labels">Credito Fiscal Mes Anterior</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-credt"
@@ -105,9 +91,7 @@
       del credito fiscal anterior
     </h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-credtTot"
@@ -120,9 +104,7 @@
     </ion-item>
     <h2 class="labels">IGV a Pagar</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" style="z-index: 1; margin-left: 1rem"
-        >S/</ion-label
-      >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
         inputmode="numeric"
         id="input-venta"
@@ -132,8 +114,9 @@
     </ion-item>
     <!-- </ion-content> -->
     <div class="selector-tipo">
-      <ion-label>Tipo de Regimen</ion-label>
+      <ion-label class="tipoRegi">Tipo de Regimen</ion-label>
       <ion-select
+        class="tipoSelect"
         [(ngModel)]="selected"
         interface="action-sheet"
         okText="Elegir"
@@ -151,9 +134,11 @@
       </ion-select>
     </div>
     <ion-item
-      style="padding-left: 30px; font-size: 24px; color: #03335e"
+      style="margin-bottom: 10px; font-size: 24px; color: #03335e"
       lines="none"
     >
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+
       <ion-label>{{regimen}}</ion-label>
     </ion-item>
   </div>
