@@ -5,6 +5,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'calc-precio',
+    loadChildren: () => import('./calculadoras/calc-precio/calc-precio.module').then( m => m.CalcPrecioPageModule)
+  },
+  {
+    path: 'calc-rentabilidad',
+    loadChildren: () => import('./calculadoras/calc-rentabilidad/calc-rentabilidad.module').then( m => m.CalcRentabilidadPageModule)
   }
 ];
 @NgModule({
