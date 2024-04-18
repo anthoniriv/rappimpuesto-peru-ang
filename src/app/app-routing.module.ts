@@ -8,11 +8,31 @@ const routes: Routes = [
   },
   {
     path: 'calc-precio',
-    loadChildren: () => import('./calculadoras/calc-precio/calc-precio.module').then( m => m.CalcPrecioPageModule)
+    loadChildren: () => import('./calculators/calc-precio/calc-precio.module').then( m => m.CalcPrecioPageModule)
   },
   {
     path: 'calc-rentabilidad',
-    loadChildren: () => import('./calculadoras/calc-rentabilidad/calc-rentabilidad.module').then( m => m.CalcRentabilidadPageModule)
+    loadChildren: () => import('./calculators/calc-rentabilidad/calc-rentabilidad.module').then( m => m.CalcRentabilidadPageModule)
+  },
+  {
+    path: 'calc-unica',
+    loadChildren: () => import('./calculators/calc-unica/calc-unica.module').then( m => m.CalcUnicaPageModule)
+  },
+  {
+    path: 'calc-anual1',
+    loadChildren: () => import('./calculators/calc-anual1/calc-anual1.module').then( m => m.CalcAnual1PageModule)
+  },
+  {
+    path: 'calc-anual2',
+    loadChildren: () => import('./calculators/calc-anual2/calc-anual2.module').then( m => m.CalcAnual2PageModule)
+  },
+  {
+    path: 'calc-cuarta',
+    loadChildren: () => import('./calculators/calc-cuarta/calc-cuarta.module').then( m => m.CalcCuartaPageModule)
+  },
+  {
+    path: 'calculators',
+    loadChildren: () => import('./calculators/calculators.module').then( m => m.CalculatorsPageModule)
   }
 ];
 @NgModule({

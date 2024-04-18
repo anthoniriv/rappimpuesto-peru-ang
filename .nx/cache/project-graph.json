@@ -280,6 +280,15 @@
         "hash": "sha512-KuS4j3Gh1h/CEj+bIOc/IcZIdiCB/DNbtUvz1eNp1o23aM8QutqelI3A4WBnQuR4yq8Z/8M3FH9F1OVwwhn2QQ=="
       }
     },
+    "npm:@angular/platform-server": {
+      "type": "npm",
+      "name": "npm:@angular/platform-server",
+      "data": {
+        "version": "17.3.5",
+        "packageName": "@angular/platform-server",
+        "hash": "sha512-cQRM+sj4NJZi6udXuoFowWIFLlHwUzNfS3WITbYw4iAI1qRgkVZctbA2aKU6lZg43lEDmts9TOqFB1smUXsdVA=="
+      }
+    },
     "npm:@angular/router": {
       "type": "npm",
       "name": "npm:@angular/router",
@@ -2093,9 +2102,18 @@
       "type": "npm",
       "name": "npm:@ionic/angular",
       "data": {
-        "version": "8.0.0",
+        "version": "8.0.0-rc.2",
         "packageName": "@ionic/angular",
-        "hash": "sha512-43bSCht78J3RSGhBkkZP7lJ+ny3cry8ndigwnO9hVnt8FqshVZFmFpJPuB3Sh1pdJDDYUBjFyFE0V42+KM1+kA=="
+        "hash": "sha512-3GNh5QAzNfHIkv/5/oU+b/YYWXzubd2PYJShLPJS35AIhg2brDzu8YE8Ezv2rN9hZgla6VJqYpCfax0h0L9PLg=="
+      }
+    },
+    "npm:@ionic/angular-server": {
+      "type": "npm",
+      "name": "npm:@ionic/angular-server",
+      "data": {
+        "version": "8.0.0-rc.2",
+        "packageName": "@ionic/angular-server",
+        "hash": "sha512-JJ6K8oVlSMiUAjwpeL9EruZXBctpOLb4+smzviZoBe4KGRyM8P1IWsYRBobh9FdWW0MV3lRRV6YBHHpkEnQQBg=="
       }
     },
     "npm:@ionic/angular-toolkit": {
@@ -2120,9 +2138,9 @@
       "type": "npm",
       "name": "npm:@ionic/core",
       "data": {
-        "version": "8.0.0",
+        "version": "8.0.0-rc.2",
         "packageName": "@ionic/core",
-        "hash": "sha512-jW1LA5mSUYmG4Go9EBWPiLv0Uxwm9vF8+3gwYNeLxJrRwzsirc1qBW/zvDTqcbyMwopAfwtb690iSv5e3i1CwA=="
+        "hash": "sha512-ZDQ4o+6DOF71fEEiUDoxrX74vctkhD9+gMQWdsE2FZZ7o7h73fk8snb9oGVCKcqUEIDanL69BYNEtRMUAkojjQ=="
       }
     },
     "npm:@ionic/utils-array": {
@@ -10144,6 +10162,15 @@
         "hash": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ=="
       }
     },
+    "npm:xhr2": {
+      "type": "npm",
+      "name": "npm:xhr2",
+      "data": {
+        "version": "0.2.1",
+        "packageName": "xhr2",
+        "hash": "sha512-sID0rrVCqkVNUn8t6xuv9+6FViXjUVXq8H5rWOH2rz9fDNQEd4g0EA2XlcEdJXRz5BMEn4O1pJFdT+z4YHhoWw=="
+      }
+    },
     "npm:xml2js": {
       "type": "npm",
       "name": "npm:xml2js",
@@ -10228,6 +10255,11 @@
       {
         "source": "npm:@angular-devkit/build-angular",
         "target": "npm:@angular/compiler-cli",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular-devkit/build-angular",
+        "target": "npm:@angular/platform-server",
         "type": "static"
       },
       {
@@ -11171,6 +11203,43 @@
       {
         "source": "npm:@angular/platform-browser-dynamic",
         "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@angular/platform-server": [
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:@angular/animations",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:@angular/compiler",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:@angular/platform-browser",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "npm:@angular/platform-server",
+        "target": "npm:xhr2",
         "type": "static"
       }
     ],
@@ -13697,6 +13766,38 @@
       },
       {
         "source": "npm:@ionic/angular",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@ionic/angular-server": [
+      {
+        "source": "npm:@ionic/angular-server",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ionic/angular-server",
+        "target": "npm:@angular/platform-server",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ionic/angular-server",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ionic/angular-server",
+        "target": "npm:zone.js",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ionic/angular-server",
+        "target": "npm:@ionic/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ionic/angular-server",
         "target": "npm:tslib",
         "type": "static"
       }

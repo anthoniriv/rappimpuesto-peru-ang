@@ -1,89 +1,88 @@
 import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-calc-cuarta',
   templateUrl: './calc-cuarta.page.html',
   styleUrls: ['./calc-cuarta.page.scss'],
 })
 export class CalcCuartaPage implements OnInit {
+  venta: any;
+  igv: any;
+  total: any;
 
-  venta:any;
-  igv:any;
-  total:any;
+  isTouchedVenta: boolean = false;
+  isTouchedIgv: boolean = false;
+  isTouchedTotal: boolean = false;
 
-  isTouchedVenta:boolean = false;
-  isTouchedIgv:boolean = false;
-  isTouchedTotal:boolean = false;
+  checked1: any;
+  checked2: any;
 
-  checked1:any;
-  checked2:any;
-
-  constructor(
-  ) { }
+  constructor() {}
 
   ngOnInit() {
     this.clearAll();
   }
   //Use clearall function to clear all the values in the calculator
-  
+
   //Function to clear all the values
-  clearAll(){
-    this.venta="";
-    this.igv="";
-    this.total="";
+  clearAll() {
+    this.venta = '';
+    this.igv = '';
+    this.total = '';
   }
 
   //Get Data Functions
 
-  getVenta(valor:any) {
-    if(this.isTouchedVenta=true){
-      console.log("Estoy calculando en venta");
+  getVenta(valor: any) {
+    if ((this.isTouchedVenta = true)) {
+      console.log('Estoy calculando en venta');
       this.venta = parseFloat(valor);
       this.calcIgv();
       this.calcTotal();
       //Conditional to check if venta is NaN
-      if(isNaN(this.venta)){
-        this.igv = "";
-        this.total = "";
-        this.venta = "";
+      if (isNaN(this.venta)) {
+        this.igv = '';
+        this.total = '';
+        this.venta = '';
       }
       console.log(this.venta);
     }
   }
 
-  getIgv(valor:any) {
-    if(this.isTouchedIgv=true){
-      console.log("Estoy calculando en igv");
+  getIgv(valor: any) {
+    if ((this.isTouchedIgv = true)) {
+      console.log('Estoy calculando en igv');
       this.igv = parseFloat(valor);
       this.calcularValorBase2();
       this.calcTotal();
       //Conditional to check if venta is NaN
-      if(isNaN(this.igv)){
-        this.venta = "";
-        this.total = "";
-        this.igv = "";
+      if (isNaN(this.igv)) {
+        this.venta = '';
+        this.total = '';
+        this.igv = '';
       }
       console.log(this.igv);
     }
   }
 
-  getTotal(valor:any) {
-    if(this.isTouchedTotal=true){
-      console.log("Estoy calculando en total");
+  getTotal(valor: any) {
+    if ((this.isTouchedTotal = true)) {
+      console.log('Estoy calculando en total');
       this.total = parseFloat(valor);
       this.calcularValorBase();
       this.calcIgv();
       //Conditional to check if venta is NaN
-      if(isNaN(this.total)){
-        this.venta = "";
-        this.igv = "";
-        this.total = "";
+      if (isNaN(this.total)) {
+        this.venta = '';
+        this.igv = '';
+        this.total = '';
       }
       console.log(this.total);
     }
   }
 
   //Change Color Functions
-  focusInputVenta(input:any){
+  focusInputVenta(input: any) {
     this.isTouchedIgv = false;
     this.isTouchedTotal = false;
     this.isTouchedVenta = true;
@@ -91,7 +90,7 @@ export class CalcCuartaPage implements OnInit {
     // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
-  focusInputIgv(input:any){
+  focusInputIgv(input: any) {
     this.isTouchedIgv = true;
     this.isTouchedTotal = false;
     this.isTouchedVenta = false;
@@ -99,7 +98,7 @@ export class CalcCuartaPage implements OnInit {
     // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
-  focusInputTotal(input:any){
+  focusInputTotal(input: any) {
     this.isTouchedTotal = true;
     this.isTouchedVenta = false;
     this.isTouchedIgv = false;
@@ -107,129 +106,129 @@ export class CalcCuartaPage implements OnInit {
     // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
-  unfocusInputVenta(input:any){
+  unfocusInputVenta(input: any) {
     this.isTouchedVenta = false;
     console.log(`${this.isTouchedVenta} es falso ahora`);
     // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
 
-  unfocusInputIgv(input:any){
+  unfocusInputIgv(input: any) {
     this.isTouchedIgv = false;
     console.log(`${this.isTouchedVenta} es falso ahora`);
     // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
-  unfocusInputTotal(input:any){
+  unfocusInputTotal(input: any) {
     this.isTouchedTotal = false;
     console.log(`${this.isTouchedVenta} es falso ahora`);
     // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
   //Calculator Functions
-  calcIgv(){
+  calcIgv() {
     var igv = this.venta * 0.08;
     igv = this.round(igv);
     this.igv = igv;
   }
 
-  changeIGV(){
-    this.igv=0;
+  changeIGV() {
+    this.igv = 0;
   }
-  calcTotal(){
+  calcTotal() {
     var total = this.venta - this.igv;
     this.total = total.toString();
     // this.total = this.venta += this.igv;
   }
-  
-  calcularValorBase(){
-    var valorBase = this.total*1.08;
+
+  calcularValorBase() {
+    var valorBase = this.total * 1.08;
     valorBase = this.round(valorBase);
     this.venta = valorBase.toString();
   }
 
   //Function to round the values witouth using toFixed
-  round(value:any){
+  round(value: any) {
     return Math.round(value * 100) / 100;
   }
 
-  calcularValorBase2(){
-    var valorBase=100*this.igv/8;
-    valorBase=this.round(valorBase);
-    this.venta=valorBase;
+  calcularValorBase2() {
+    var valorBase = (100 * this.igv) / 8;
+    valorBase = this.round(valorBase);
+    this.venta = valorBase;
   }
 
-  cuartaCheck(e: { target: any; }){
+  cuartaCheck(e: { target: any }) {
     var checkbox = e.target;
     this.checked1 = checkbox.checked;
-    if(this.checked1){
-      if(this.venta>1500){
+    if (this.checked1) {
+      if (this.venta > 1500) {
         this.changeIGV();
         this.calcTotal();
       }
-      if(this.venta<1500){
+      if (this.venta < 1500) {
         this.changeIGV();
         this.calcTotal();
       }
-      console.log("Estoy en true");
+      console.log('Estoy en true');
     }
-    if(this.checked2 == true && this.checked1 == true){
+    if (this.checked2 == true && this.checked1 == true) {
       this.calcIgv();
       this.calcTotal();
     }
-    if(this.checked2 == false && this.checked1 == true){
-      if(this.venta>1500){
+    if (this.checked2 == false && this.checked1 == true) {
+      if (this.venta > 1500) {
         this.changeIGV();
         this.calcTotal();
       }
-      if(this.venta<1500){
-        this.changeIGV();
-        this.calcTotal();
-      }
-    }
-    if(this.checked2 == false && this.checked1 == false){
-      if(this.venta>1500){
-        this.calcIgv();
-        this.calcTotal();
-      }
-      if(this.venta<1500){
+      if (this.venta < 1500) {
         this.changeIGV();
         this.calcTotal();
       }
     }
-    if(this.checked1==false){
-      if(this.venta>1500){
+    if (this.checked2 == false && this.checked1 == false) {
+      if (this.venta > 1500) {
         this.calcIgv();
         this.calcTotal();
       }
-      if(this.venta<1500){
+      if (this.venta < 1500) {
+        this.changeIGV();
+        this.calcTotal();
+      }
+    }
+    if (this.checked1 == false) {
+      if (this.venta > 1500) {
+        this.calcIgv();
+        this.calcTotal();
+      }
+      if (this.venta < 1500) {
         this.changeIGV();
         this.calcTotal();
       }
     }
   }
 
-  superarCheck(e: { target: any; }){
+  superarCheck(e: { target: any }) {
     var checkbox = e.target;
     this.checked2 = checkbox.checked;
-    if(this.checked2){
+    if (this.checked2) {
       this.calcIgv();
       this.calcTotal();
     }
-    if(this.checked2 == true && this.checked1 == true){
-      console.log("Estamos en true y true");
+    if (this.checked2 == true && this.checked1 == true) {
+      console.log('Estamos en true y true');
     }
-    if(this.checked2 == false && this.checked1 == true){
-      console.log("Estamos en false y true");
+    if (this.checked2 == false && this.checked1 == true) {
+      console.log('Estamos en false y true');
     }
-    if(this.checked2 == false && this.checked1 == false){
-      if(this.venta>1500){
+    if (this.checked2 == false && this.checked1 == false) {
+      if (this.venta > 1500) {
         this.calcIgv();
         this.calcTotal();
       }
-      if(this.venta<1500){
+      if (this.venta < 1500) {
         this.changeIGV();
         this.calcTotal();
       }
     }
-    if(this.checked2==false){
+    if (this.checked2 == false) {
       this.changeIGV();
       this.calcTotal();
     }
