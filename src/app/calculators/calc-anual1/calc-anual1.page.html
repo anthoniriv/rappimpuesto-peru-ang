@@ -115,6 +115,7 @@
     <!-- </ion-content> -->
     <div class="selector-tipo">
       <ion-label class="tipoRegi">Tipo de Regimen</ion-label>
+      <p></p>
       <ion-select
         class="tipoSelect"
         [(ngModel)]="selected"
@@ -123,7 +124,7 @@
         cancelText="Cancelar"
         (ionChange)="regimenChange($event)"
       >
-        <ion-select-option value="default"></ion-select-option>
+        <ion-select-option value="default">Seleccione</ion-select-option>
         <ion-select-option value="RER"
           >Régimen Especial de Renta</ion-select-option
         >

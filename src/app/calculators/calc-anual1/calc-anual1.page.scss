@@ -59,35 +59,44 @@ ion-item {
     width: 80%;
     margin: 25px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row; /* Invierte el orden de los elementos dentro del flex container */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    gap: 20px;
     border-radius: 12px;
     background: linear-gradient(90deg, #0d2b56, #005aa3);
     color: #fff;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye el padding y border en la medida del ancho y alto */
   }
 
   .tipoRegi {
-    flex: 1; /* Ocupa el espacio restante, empujando el select hacia el extremo derecho */
-    text-align: left; /* Alinea el texto a la izquierda */
-    font-size: 16px; /* Tamaño de fuente para el label */
-    white-space: normal; /* Permite que el texto se envuelva normalmente */
-    line-height: 1.2; /* Ajusta la altura de línea para controlar el espaciado entre líneas */
-    max-width: 120px; /* Limita el ancho del texto para forzar un salto de línea */
-    word-wrap: break-word; /* Asegura que las palabras se puedan romper y pasar a la siguiente línea */
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: left; /* Alinea el texto a la derecha */
+    font-size: 16px;
+    white-space: normal;
+    line-height: 1.2;
+    max-width: 150px; /* Limita el ancho máximo para forzar el salto de línea */
+    word-wrap: break-word;
+  }
+
+  p{
+    margin-left: 10px;
+    margin-right: 0px;
   }
 
   .tipoSelect {
-    flex: 1; /* Ocupa el espacio restante, empujando el select hacia el extremo derecho */
-    text-align: center; /* Alinea el texto a la izquierda */
-    font-size: 16px; /* Tamaño de fuente para el label */
-    white-space: normal; /* Permite que el texto se envuelva normalmente */
-    line-height: 1.2; /* Ajusta la altura de línea para controlar el espaciado entre líneas */
-    max-width: 120px; /* Limita el ancho del texto para forzar un salto de línea */
-    word-wrap: break-word;
-  }
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: right; /* Alinea el texto a la derecha */
+    font-size: 16px;
+    white-space: normal; /* Evita que el texto se desborde horizontalmente */
+    overflow: hidden; /* Oculta cualquier texto que se desborde del contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) si el texto está truncado */
+    line-height: 1.2;
+    max-height: calc(1.2em * 3); /* Altura máxima para dos líneas */
+    max-width: 200px; /* Ajusta el ancho máximo según sea necesario */
+}
+
 
   .button {
     margin-top: 20px !important;
