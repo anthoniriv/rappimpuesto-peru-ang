@@ -73,5 +73,5 @@ export class CalcPrecioPage implements OnInit {
   ngOnInit() {
     // Initialization code here
     console.log("CalcPrecioPage initialized");
-  }
+  }
 }
