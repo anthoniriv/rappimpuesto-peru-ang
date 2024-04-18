@@ -14,6 +14,8 @@ export class CalcPrecioPage implements OnInit {
   ganancia2: string = "";
   showPopover: boolean = false;
   popoverContent: string = "";
+  alertButtons = ['Action'];
+
 
   handleInfoClick(content: any) {
     this.popoverContent = content;

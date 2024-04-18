@@ -24,22 +24,12 @@ ion-item {
       margin-top: 20px;
       margin-left: 40px;
     }
-
-    .btnInfo ion-button {
-      --background: white;
-      --color: black;
-      border-radius: 20px;
-      border: 1px solid #000000 !important;
-      --padding: -5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 10px;
-      font-weight: bold;
+    .btnInfo{
+      background-color: #e4ecf7;
     }
-
     .pop {
       margin-right: 25px;
+      background-color: transparent !important;
       width: 20px;
       height: 20px;
     }

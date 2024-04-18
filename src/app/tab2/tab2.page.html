@@ -1,17 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content class="main" [fullscreen]="true">
+  <div class="content">
+    <!-- <h2>Bienvenidos a</h2> -->
+    <!-- <h1>IMPUESTOS PERÚ</h1> -->
+    <div class="divisor"></div>
+    <p>
+      Somos un estudio contable tributario y legal que ha desarrollado esta app útil para ti.
+    </p>
+    <ion-button expand="large" class="info-button" (click)="contact()">
+      CONTACTANOS
+    </ion-button>
+    <br>
+    <br>
+    <p class="info">*Presione aqui para obtener asesoria gratuita en temas de contabilidad tributación, constitución de empresas, temas societarios y mas...</p>
+  </div>
 </ion-content>

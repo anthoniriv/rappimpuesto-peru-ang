@@ -5,11 +5,18 @@
   <div class="mainPrecio">
     <h2 class="labels">
       Compras
-      <ion-button class="btnInfo" color="#03335e" (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')">
-        <img class="pop" src="../../../assets/png/i.png"/>
+      <ion-button class="btnInfo" id="present-alert" color="#f4f5f8">
+        <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
+      <ion-alert
+        trigger="present-alert"
+        header="A Short Title Is Best"
+        subHeader="A Sub Header Is Optional"
+        message="A message should be a short, complete sentence."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </h2>
-    
+
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
       <ion-input
@@ -22,8 +29,12 @@
     </ion-item>
     <h2 class="labels">
       Gastos
-      <ion-button class="btnInfo" color="#03335e" (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')">
-        <img class="pop" src="../../../assets/png/i.png"/>
+      <ion-button
+        class="btnInfo"
+        color="#03335e"
+        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
+      >
+        <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
     </h2>
     <ion-item class="inputs" lines="none">
@@ -38,8 +49,12 @@
     </ion-item>
     <h2 class="labels">
       Ganancia 1
-      <ion-button class="btnInfo" color="#03335e" (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')">
-        <img class="pop" src="../../../assets/png/i.png"/>
+      <ion-button
+        class="btnInfo"
+        color="#03335e"
+        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
+      >
+        <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
     </h2>
     <ion-item class="inputs" lines="none">
@@ -54,8 +69,12 @@
     </ion-item>
     <h2 class="labels">
       IGV
-      <ion-button class="btnInfo" color="#03335e" (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')">
-        <img class="pop" src="../../../assets/png/i.png"/>
+      <ion-button
+        class="btnInfo"
+        color="#03335e"
+        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
+      >
+        <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
     </h2>
     <ion-item class="inputs" lines="none">
@@ -71,8 +90,12 @@
     </ion-item>
     <h2 class="labels">
       Precio
-      <ion-button class="btnInfo" color="#03335e" (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')">
-        <img class="pop" src="../../../assets/png/i.png"/>
+      <ion-button
+        class="btnInfo"
+        color="#03335e"
+        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
+      >
+        <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
     </h2>
     <ion-item class="inputs" lines="none">
@@ -88,8 +111,12 @@
     </ion-item>
     <h2 class="labels">
       Ganancia 2
-      <ion-button class="btnInfo" color="#03335e" (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')">
-        <img class="pop" src="../../../assets/png/i.png"/>
+      <ion-button
+        class="btnInfo"
+        color="#03335e"
+        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
+      >
+        <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
     </h2>
     <ion-item class="inputs" lines="none">
@@ -104,9 +131,7 @@
       ></ion-input>
     </ion-item>
   </div>
-  <ion-popover [isOpen]="showPopover">
-    <ion-content class="ion-padding">{{ popoverContent }}</ion-content>
-  </ion-popover>
+
   <ion-button class="reset" expand="block" (click)="handleReset()">
     Reiniciar
   </ion-button>
