@@ -1,0 +1,7 @@
+{
+  "name": "rappimpuestos-app-ang",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
