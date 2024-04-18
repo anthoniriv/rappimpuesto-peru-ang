@@ -1,1 +1,26 @@
+.navBottom {
+  width: auto;
+  height: auto;
+  padding-bottom: 5px;
+  margin-bottom: -6px;
+  background-color: #e4ecf7;
 
+  ion-tab-bar {
+    --background: linear-gradient(to top, #0c3766, #045393);
+    --border-style: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    border: 0px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+    ion-tab-button {
+      color: rgb(255, 255, 255);
+      --background: transparent;
+    }
+
+    ion-tab-button.tab-selected {
+      color: #3fcdd5 !important;
+    }
+  }
+}

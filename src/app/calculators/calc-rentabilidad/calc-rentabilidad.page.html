@@ -1,11 +1,11 @@
 <ion-content fullscreen="true">
   <div class="top2">
-    <img src="{Top2}" alt="" />
+    <img src="./../../../assets/png/top2.png" alt="" />
   </div>
   <div class="main">
     <h2 class="labels">Mis Costos</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-label position="fixed">S/</ion-label>
       <ion-input
         inputmode="numeric"
         id="input-venta"
@@ -17,7 +17,7 @@
     </ion-item>
     <h2 class="labels">Porcentaje que quiero ganar</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="end" class="solesLabel"> % </ion-label>
+      <ion-label position="fixed">%</ion-label>
       <ion-input
         inputmode="numeric"
         id="input-igv"
@@ -29,7 +29,7 @@
     </ion-item>
     <h2 class="labels">Ganancia</h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-label position="fixed">S/</ion-label>
       <ion-input
         inputmode="numeric"
         id="input-total"
@@ -41,6 +41,6 @@
     </ion-item>
   </div>
   <ion-button class="buttonReiniciar" expand="block" (click)="reset()">
-    Reiniciar
-  </ion-button>
+    <span style="padding-right: 16px;">REINICIAR</span><span>></span>
+  </ion-button>  
 </ion-content>
