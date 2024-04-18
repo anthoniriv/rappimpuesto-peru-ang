@@ -343,7 +343,7 @@ export class CalcAnual1Page implements OnInit {
     return valor;
   }
 
-  regimenChange($event: { target: { value: any } }) {
+  regimenChange($event: any) {
     this.selected = $event.target.value;
     console.log(this.selected);
     if (this.selected == 'RER') {

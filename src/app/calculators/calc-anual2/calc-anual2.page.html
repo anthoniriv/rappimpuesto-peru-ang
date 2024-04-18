@@ -50,7 +50,7 @@
       (ionBlur)="unfocusInputVenta('input-venta2')"
       (ionInput)="getVenta($event.target.value)"
       placeholder="S/.0"
-      [(ngModel)]="venta2"
+      [(ngModel)]="venta"
     ></ion-input>
     <ion-text>
       <h2>IGV/CRED. Fiscal</h2>
@@ -61,7 +61,7 @@
       (ionBlur)="unfocusInputIgv('input-igv2')"
       (ionInput)="getIgv($event.target.value)"
       placeholder="S/.0"
-      [(ngModel)]="igv2"
+      [(ngModel)]="igv"
     ></ion-input>
     <ion-text>
       <h2>Sub Total</h2>
@@ -72,7 +72,7 @@
       (ionBlur)="unfocusInputTotal('input-total2')"
       (ionInput)="getTotal($event.target.value)"
       placeholder="S/.0"
-      [(ngModel)]="total2"
+      [(ngModel)]="total"
     ></ion-input>
   </div>
 </ion-content>
