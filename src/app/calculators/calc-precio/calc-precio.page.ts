@@ -14,7 +14,7 @@ export class CalcPrecioPage implements OnInit {
   ganancia2: string = "";
   showPopover: boolean = false;
   popoverContent: string = "";
-  alertButtons = ['Action'];
+  alertButtons = ['Entendido'];
 
 
   handleInfoClick(content: any) {
@@ -54,8 +54,11 @@ export class CalcPrecioPage implements OnInit {
       const precioCalculado = total + igvCalculado;
       this.precio = precioCalculado.toFixed(2);
 
-      const ganancia2Calculada = igvCalculado - parseFloat(this.igv);
+      const creditoFiscal = parseFloat(compras) * 0.18;
+      const ganancia2Calculada = creditoFiscal - parseFloat(this.igv);
       this.ganancia2 = ganancia2Calculada.toFixed(2);
+      console.log("Precio: " + this.precio);
+      console.log("Ganancia2: " + this.ganancia2);
     } else {
       this.igv = "";
       this.precio = "";

@@ -95,11 +95,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "1378404566696275539"
+        "hash": "4477866178090374634"
       },
       {
         "file": "package.json",
-        "hash": "1884941202571932973"
+        "hash": "12392090412443662377"
       },
       {
         "file": "resources/icon.png",
@@ -111,7 +111,7 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "5870120994124813914"
+        "hash": "15119391054173024188"
       },
       {
         "file": "src/app/app.component.html",
@@ -134,152 +134,8 @@
         "hash": "17195997832060172707"
       },
       {
-        "file": "src/app/calculadoras/calc-anual1/calc-anual1-routing.module.ts",
-        "hash": "669643740818979762"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual1/calc-anual1.module.ts",
-        "hash": "11697473002033261025"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual1/calc-anual1.page.html",
-        "hash": "9976594808370024756"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual1/calc-anual1.page.scss",
-        "hash": "10780274737780924744"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual1/calc-anual1.page.spec.ts",
-        "hash": "1282595473846055298"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual1/calc-anual1.page.ts",
-        "hash": "18273423399878619959"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual2/calc-anual2-routing.module.ts",
-        "hash": "6265988866156119384"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual2/calc-anual2.module.ts",
-        "hash": "13556489379240174451"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual2/calc-anual2.page.html",
-        "hash": "7492450471580560980"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual2/calc-anual2.page.scss",
-        "hash": "10289873308128224649"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual2/calc-anual2.page.spec.ts",
-        "hash": "5017241421376816636"
-      },
-      {
-        "file": "src/app/calculadoras/calc-anual2/calc-anual2.page.ts",
-        "hash": "17117929014024154087"
-      },
-      {
-        "file": "src/app/calculadoras/calc-cuarta/calc-cuarta-routing.module.ts",
-        "hash": "6053510455293289157"
-      },
-      {
-        "file": "src/app/calculadoras/calc-cuarta/calc-cuarta.module.ts",
-        "hash": "17043388555446983978"
-      },
-      {
-        "file": "src/app/calculadoras/calc-cuarta/calc-cuarta.page.html",
-        "hash": "9530593382928639129"
-      },
-      {
-        "file": "src/app/calculadoras/calc-cuarta/calc-cuarta.page.scss",
-        "hash": "797747648532914280"
-      },
-      {
-        "file": "src/app/calculadoras/calc-cuarta/calc-cuarta.page.spec.ts",
-        "hash": "7125983341041393046"
-      },
-      {
-        "file": "src/app/calculadoras/calc-cuarta/calc-cuarta.page.ts",
-        "hash": "10012872595879852501"
-      },
-      {
-        "file": "src/app/calculadoras/calc-precio/calc-precio-routing.module.ts",
-        "hash": "11564670223406492150"
-      },
-      {
-        "file": "src/app/calculadoras/calc-precio/calc-precio.module.ts",
-        "hash": "2879608373165684675"
-      },
-      {
-        "file": "src/app/calculadoras/calc-precio/calc-precio.page.html",
-        "hash": "6670084956940098616"
-      },
-      {
-        "file": "src/app/calculadoras/calc-precio/calc-precio.page.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/calculadoras/calc-precio/calc-precio.page.spec.ts",
-        "hash": "12424392091392675476"
-      },
-      {
-        "file": "src/app/calculadoras/calc-precio/calc-precio.page.ts",
-        "hash": "397007383209642145"
-      },
-      {
-        "file": "src/app/calculadoras/calc-rentabilidad/calc-rentabilidad-routing.module.ts",
-        "hash": "2363622949786318204"
-      },
-      {
-        "file": "src/app/calculadoras/calc-rentabilidad/calc-rentabilidad.module.ts",
-        "hash": "3268045003358281781"
-      },
-      {
-        "file": "src/app/calculadoras/calc-rentabilidad/calc-rentabilidad.page.html",
-        "hash": "742734581189474363"
-      },
-      {
-        "file": "src/app/calculadoras/calc-rentabilidad/calc-rentabilidad.page.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/calculadoras/calc-rentabilidad/calc-rentabilidad.page.spec.ts",
-        "hash": "15535201982643288885"
-      },
-      {
-        "file": "src/app/calculadoras/calc-rentabilidad/calc-rentabilidad.page.ts",
-        "hash": "6681424914216557590"
-      },
-      {
-        "file": "src/app/calculadoras/calc-unica/calc-unica-routing.module.ts",
-        "hash": "8487391562182783349"
-      },
-      {
-        "file": "src/app/calculadoras/calc-unica/calc-unica.module.ts",
-        "hash": "13324882384069894633"
-      },
-      {
-        "file": "src/app/calculadoras/calc-unica/calc-unica.page.html",
-        "hash": "15087101668850592162"
-      },
-      {
-        "file": "src/app/calculadoras/calc-unica/calc-unica.page.scss",
-        "hash": "7298101307592987942"
-      },
-      {
-        "file": "src/app/calculadoras/calc-unica/calc-unica.page.spec.ts",
-        "hash": "13169448514171211731"
-      },
-      {
-        "file": "src/app/calculadoras/calc-unica/calc-unica.page.ts",
-        "hash": "6889313511892480413"
-      },
-      {
         "file": "src/app/calculadoras/calculadoras-routing.module.ts",
-        "hash": "1998674244966669387"
+        "hash": "13281030330539557088"
       },
       {
         "file": "src/app/calculadoras/calculadoras.module.ts",
@@ -300,6 +156,174 @@
       {
         "file": "src/app/calculadoras/calculadoras.page.ts",
         "hash": "4304900296952368638"
+      },
+      {
+        "file": "src/app/calculators/calc-anual1/calc-anual1-routing.module.ts",
+        "hash": "669643740818979762"
+      },
+      {
+        "file": "src/app/calculators/calc-anual1/calc-anual1.module.ts",
+        "hash": "11697473002033261025"
+      },
+      {
+        "file": "src/app/calculators/calc-anual1/calc-anual1.page.html",
+        "hash": "13635046041119068889"
+      },
+      {
+        "file": "src/app/calculators/calc-anual1/calc-anual1.page.scss",
+        "hash": "10780274737780924744"
+      },
+      {
+        "file": "src/app/calculators/calc-anual1/calc-anual1.page.spec.ts",
+        "hash": "15140651362493776803"
+      },
+      {
+        "file": "src/app/calculators/calc-anual1/calc-anual1.page.ts",
+        "hash": "4563808350056880036"
+      },
+      {
+        "file": "src/app/calculators/calc-anual2/calc-anual2-routing.module.ts",
+        "hash": "6265988866156119384"
+      },
+      {
+        "file": "src/app/calculators/calc-anual2/calc-anual2.module.ts",
+        "hash": "13556489379240174451"
+      },
+      {
+        "file": "src/app/calculators/calc-anual2/calc-anual2.page.html",
+        "hash": "7286124120367360533"
+      },
+      {
+        "file": "src/app/calculators/calc-anual2/calc-anual2.page.scss",
+        "hash": "1612518348500171426"
+      },
+      {
+        "file": "src/app/calculators/calc-anual2/calc-anual2.page.spec.ts",
+        "hash": "9670950564785751276"
+      },
+      {
+        "file": "src/app/calculators/calc-anual2/calc-anual2.page.ts",
+        "hash": "1781931792135328050"
+      },
+      {
+        "file": "src/app/calculators/calc-cuarta/calc-cuarta-routing.module.ts",
+        "hash": "6053510455293289157"
+      },
+      {
+        "file": "src/app/calculators/calc-cuarta/calc-cuarta.module.ts",
+        "hash": "17043388555446983978"
+      },
+      {
+        "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.html",
+        "hash": "5427098951967044466"
+      },
+      {
+        "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.scss",
+        "hash": "14045104402068735251"
+      },
+      {
+        "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.spec.ts",
+        "hash": "17106009506832424109"
+      },
+      {
+        "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.ts",
+        "hash": "9585855885335776610"
+      },
+      {
+        "file": "src/app/calculators/calc-precio/calc-precio-routing.module.ts",
+        "hash": "11564670223406492150"
+      },
+      {
+        "file": "src/app/calculators/calc-precio/calc-precio.module.ts",
+        "hash": "2879608373165684675"
+      },
+      {
+        "file": "src/app/calculators/calc-precio/calc-precio.page.html",
+        "hash": "9748701252770395546"
+      },
+      {
+        "file": "src/app/calculators/calc-precio/calc-precio.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/calculators/calc-precio/calc-precio.page.spec.ts",
+        "hash": "12424392091392675476"
+      },
+      {
+        "file": "src/app/calculators/calc-precio/calc-precio.page.ts",
+        "hash": "5084429944180650477"
+      },
+      {
+        "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad-routing.module.ts",
+        "hash": "2363622949786318204"
+      },
+      {
+        "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.module.ts",
+        "hash": "3268045003358281781"
+      },
+      {
+        "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.html",
+        "hash": "17471977089166582530"
+      },
+      {
+        "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.spec.ts",
+        "hash": "15535201982643288885"
+      },
+      {
+        "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.ts",
+        "hash": "10641810318897295603"
+      },
+      {
+        "file": "src/app/calculators/calc-unica/calc-unica-routing.module.ts",
+        "hash": "8487391562182783349"
+      },
+      {
+        "file": "src/app/calculators/calc-unica/calc-unica.module.ts",
+        "hash": "13324882384069894633"
+      },
+      {
+        "file": "src/app/calculators/calc-unica/calc-unica.page.html",
+        "hash": "5849068348592697656"
+      },
+      {
+        "file": "src/app/calculators/calc-unica/calc-unica.page.scss",
+        "hash": "14715193705416433910"
+      },
+      {
+        "file": "src/app/calculators/calc-unica/calc-unica.page.spec.ts",
+        "hash": "14394676226429130088"
+      },
+      {
+        "file": "src/app/calculators/calc-unica/calc-unica.page.ts",
+        "hash": "15140136934878644404"
+      },
+      {
+        "file": "src/app/calculators/calculators-routing.module.ts",
+        "hash": "16684801325245832971"
+      },
+      {
+        "file": "src/app/calculators/calculators.module.ts",
+        "hash": "441631065731467964"
+      },
+      {
+        "file": "src/app/calculators/calculators.page.html",
+        "hash": "10535334638075551807"
+      },
+      {
+        "file": "src/app/calculators/calculators.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/calculators/calculators.page.spec.ts",
+        "hash": "6132348480710331070"
+      },
+      {
+        "file": "src/app/calculators/calculators.page.ts",
+        "hash": "11320208905356686703"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",

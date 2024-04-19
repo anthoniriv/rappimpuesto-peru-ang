@@ -10,9 +10,8 @@
       </ion-button>
       <ion-alert
         trigger="present-alert"
-        header="A Short Title Is Best"
-        subHeader="A Sub Header Is Optional"
-        message="A message should be a short, complete sentence."
+        header="Información"
+        message="Aquí debemos poder el costo del producto u otros que tienen factura."
         [buttons]="alertButtons"
       ></ion-alert>
     </h2>
@@ -29,13 +28,15 @@
     </ion-item>
     <h2 class="labels">
       Gastos
-      <ion-button
-        class="btnInfo"
-        color="#03335e"
-        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
-      >
+      <ion-button class="btnInfo" id="gastos-alert" color="#f4f5f8">
         <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
+      <ion-alert
+        trigger="gastos-alert"
+        header="Información"
+        message="Aquí debemos poder el costo de los servicios u gastos referidos al producto, no tienen factura."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
@@ -49,13 +50,15 @@
     </ion-item>
     <h2 class="labels">
       Ganancia 1
-      <ion-button
-        class="btnInfo"
-        color="#03335e"
-        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
-      >
+      <ion-button class="btnInfo" id="ganancia-alert" color="#f4f5f8">
         <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
+      <ion-alert
+        trigger="ganancia-alert"
+        header="Información"
+        message="Aquí poner el monto en soles del calculo de ganancia en obtenido en el cálculo anterior."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
@@ -69,13 +72,15 @@
     </ion-item>
     <h2 class="labels">
       IGV
-      <ion-button
-        class="btnInfo"
-        color="#03335e"
-        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
-      >
+      <ion-button class="btnInfo" id="igv-alert" color="#f4f5f8">
         <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
+      <ion-alert
+        trigger="igv-alert"
+        header="Información"
+        message="Sub total mas IGV."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
@@ -90,13 +95,15 @@
     </ion-item>
     <h2 class="labels">
       Precio
-      <ion-button
-        class="btnInfo"
-        color="#03335e"
-        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
-      >
+      <ion-button class="btnInfo" id="precio-alert" color="#f4f5f8">
         <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
+      <ion-alert
+        trigger="precio-alert"
+        header="Información"
+        message="Precio que debo cobrar."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
@@ -111,13 +118,15 @@
     </ion-item>
     <h2 class="labels">
       Ganancia 2
-      <ion-button
-        class="btnInfo"
-        color="#03335e"
-        (click)="handleInfoClick('Aquí debemos poder el costo del producto u otros que tienen factura')"
-      >
+      <ion-button class="btnInfo" id="ganancia2-alert" color="#f4f5f8">
         <img class="pop" src="../../../assets/png/i.png" />
       </ion-button>
+      <ion-alert
+        trigger="ganancia2-alert"
+        header="Información"
+        message="Crédito fiscal - igv a pagar."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
