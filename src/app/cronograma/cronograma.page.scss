@@ -16,6 +16,7 @@
       color: #fff;
     }
   }
+  
   .boton {
     margin: auto;
     margin-top: 20px;
@@ -30,15 +31,20 @@
     align-items: center;
     margin-bottom: 25%;
     font-size: 22px;
+    margin-top: 120px;
+    margin-bottom: 20px;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #fff;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
   ion-list {
-    background-color: rgba(255, 255, 255, 0);
+    --ion-background-color: #fff !important; /* Establece el fondo de la lista a blanco */
+    background-color: #fff !important; /* También establece el fondo de la lista a blanco para asegurar la cobertura */
+
     ion-item {
-      --ion-background-color: rgba(255, 255, 255, 0);
+      --ion-background-color: #fff !important; /* Establece el fondo de los ítems a blanco */
+      background-color: #fff !important; /* Fondo blanco para los elementos de la lista */
       text-align: center;
       ion-label {
         color: #203680;
@@ -48,6 +54,6 @@
     }
   }
   ion-button {
-    margin-top: 20px;
+    margin-top: 30px !important;
   }
 }

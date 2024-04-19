@@ -4,18 +4,18 @@
 <ion-content>
   <section class="top">
     <ion-searchbar
-      color="light"
-      style="width: 80%; margin: auto; color: #203680"
+      color="white"
+      placeholder="Introduce tu N° de RUC"
+      [(ngModel)]="cronograma"
+      (keyup.enter)="generaraCronograma(cronograma)"
+      animated="true"
       type="tel"
       maxlength="11"
       inputmode="numeric"
       required="true"
-      (keyup.enter)="generaraCronograma(cronograma)"
-      placeholder="Introduce tu N° de RUC"
-      [(ngModel)]="cronograma"
       enterkeyhint="done"
-      animated="true"
-    ></ion-searchbar>
+      style="width: 80%; margin: auto; color: #203680;"
+      ></ion-searchbar>
   </section>
   <section class="down">
     <ion-accordion-group>
