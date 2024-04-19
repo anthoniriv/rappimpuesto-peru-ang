@@ -24,14 +24,18 @@ ion-item {
       margin-top: 20px;
       margin-left: 40px;
     }
-    .btnInfo{
-      background-color: #e4ecf7;
+    ion-button.btnInfo {
+      --border-width: 0 !important;
+      --outline: none !important;
+      --box-shadow: none !important;
     }
+    
     .pop {
       margin-right: 25px;
       background-color: transparent !important;
       width: 20px;
       height: 20px;
+      border: none;
     }
 
     ion-item {
@@ -66,6 +70,7 @@ ion-item {
     margin-top: 40px;
     margin-bottom: 50px;
     width: 80%;
+    --border-radius: 10px; /* Esta es la variable correcta para el redondeado en Ionic */
     color: white;
     --background: linear-gradient(90deg, #0d2b56, #005aa3);
   }
