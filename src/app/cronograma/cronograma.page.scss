@@ -1,0 +1,53 @@
+.main {
+  --background: url("../../assets/png/5.jpg") 0 0/100% 100% no-repeat;
+  --ion-background-color: #f9fbfc;
+  .top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    .ruc {
+      padding: 0;
+      margin: 0;
+      padding-left: 25px;
+      font-size: 40px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  .boton {
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    --background: linear-gradient(90deg, #0d2b56, #005aa3) !important;
+  }
+  .titles {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25%;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  ion-list {
+    background-color: rgba(255, 255, 255, 0);
+    ion-item {
+      --ion-background-color: rgba(255, 255, 255, 0);
+      text-align: center;
+      ion-label {
+        color: #203680;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+  ion-button {
+    margin-top: 20px;
+  }
+}

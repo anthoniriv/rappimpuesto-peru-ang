@@ -10,6 +10,7 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@capacitor/android": "^6.0.0",
     "@capacitor/app": "6.0.0",
     "@capacitor/core": "6.0.0",
     "@capacitor/haptics": "6.0.0",
@@ -17,6 +18,7 @@
     "@capacitor/status-bar": "6.0.0",
     "@ionic/angular": "^8.0.0-rc.2",
     "@ionic/angular-server": "^8.0.0-rc.2",
+    "@ionic/storage-angular": "^4.0.0",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -67,7 +69,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "91109559695469517"
+        "hash": "5943834000395338719"
       },
       {
         "file": ".vscode/extensions.json",
@@ -76,6 +78,218 @@
       {
         "file": ".vscode/settings.json",
         "hash": "1151538777131426085"
+      },
+      {
+        "file": "android/.gitignore",
+        "hash": "16088808965373471785"
+      },
+      {
+        "file": "android/app/.gitignore",
+        "hash": "3800628318224317187"
+      },
+      {
+        "file": "android/app/build.gradle",
+        "hash": "13510624848603487050"
+      },
+      {
+        "file": "android/app/capacitor.build.gradle",
+        "hash": "321577693221425197"
+      },
+      {
+        "file": "android/app/proguard-rules.pro",
+        "hash": "16319704539319765030"
+      },
+      {
+        "file": "android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java",
+        "hash": "1280125089554780403"
+      },
+      {
+        "file": "android/app/src/main/AndroidManifest.xml",
+        "hash": "15143078514206279353"
+      },
+      {
+        "file": "android/app/src/main/java/io/ionic/starter/MainActivity.java",
+        "hash": "18189106575645248423"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-land-hdpi/splash.png",
+        "hash": "12618218220193540786"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-land-mdpi/splash.png",
+        "hash": "13354102016025079206"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-land-xhdpi/splash.png",
+        "hash": "16928120350772912315"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-land-xxhdpi/splash.png",
+        "hash": "8114284271146720243"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-land-xxxhdpi/splash.png",
+        "hash": "10648225290896133372"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-port-hdpi/splash.png",
+        "hash": "7870574596552345396"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-port-mdpi/splash.png",
+        "hash": "512985810174291431"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-port-xhdpi/splash.png",
+        "hash": "13168839858812363171"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-port-xxhdpi/splash.png",
+        "hash": "1546567578093946022"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-port-xxxhdpi/splash.png",
+        "hash": "7224188242308859997"
+      },
+      {
+        "file": "android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml",
+        "hash": "16602625396055746895"
+      },
+      {
+        "file": "android/app/src/main/res/drawable/ic_launcher_background.xml",
+        "hash": "4055909962711590499"
+      },
+      {
+        "file": "android/app/src/main/res/drawable/splash.png",
+        "hash": "13354102016025079206"
+      },
+      {
+        "file": "android/app/src/main/res/layout/activity_main.xml",
+        "hash": "13540211242698942768"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+        "hash": "16176709064596667284"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "hash": "16176709064596667284"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "hash": "10700838889768688031"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+        "hash": "15163013499175324231"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+        "hash": "17762064175266230691"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "hash": "9342129704159603628"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+        "hash": "4133705743351324192"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+        "hash": "9039760806353812177"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "hash": "15127275078370164788"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+        "hash": "6222172872530160361"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+        "hash": "16696879462706858720"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "hash": "5466540626246768150"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+        "hash": "6321943060948364586"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+        "hash": "14088589834205738071"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "hash": "18428292913404649045"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+        "hash": "11484431673195189447"
+      },
+      {
+        "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+        "hash": "1772322197088498798"
+      },
+      {
+        "file": "android/app/src/main/res/values/ic_launcher_background.xml",
+        "hash": "9482601953118464086"
+      },
+      {
+        "file": "android/app/src/main/res/values/strings.xml",
+        "hash": "12626483216899168547"
+      },
+      {
+        "file": "android/app/src/main/res/values/styles.xml",
+        "hash": "17918612613785874663"
+      },
+      {
+        "file": "android/app/src/main/res/xml/file_paths.xml",
+        "hash": "14753087816109454837"
+      },
+      {
+        "file": "android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java",
+        "hash": "11856600006954306230"
+      },
+      {
+        "file": "android/build.gradle",
+        "hash": "104498402476417432"
+      },
+      {
+        "file": "android/capacitor.settings.gradle",
+        "hash": "14622451423594914531"
+      },
+      {
+        "file": "android/gradle.properties",
+        "hash": "2024862945433011340"
+      },
+      {
+        "file": "android/gradle/wrapper/gradle-wrapper.jar",
+        "hash": "16190395672885700475"
+      },
+      {
+        "file": "android/gradle/wrapper/gradle-wrapper.properties",
+        "hash": "7820195716585980493"
+      },
+      {
+        "file": "android/gradlew",
+        "hash": "9753110710257805285"
+      },
+      {
+        "file": "android/gradlew.bat",
+        "hash": "8837338129170646035"
+      },
+      {
+        "file": "android/settings.gradle",
+        "hash": "426215723856156424"
+      },
+      {
+        "file": "android/variables.gradle",
+        "hash": "5538646242638276855"
       },
       {
         "file": "angular.json",
@@ -95,11 +309,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "4477866178090374634"
+        "hash": "14764761934254548337"
       },
       {
         "file": "package.json",
-        "hash": "12392090412443662377"
+        "hash": "536848576291026150"
       },
       {
         "file": "resources/icon.png",
@@ -167,11 +381,11 @@
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.html",
-        "hash": "13635046041119068889"
+        "hash": "11438097667886334940"
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.scss",
-        "hash": "10780274737780924744"
+        "hash": "10994488847253047092"
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.spec.ts",
@@ -179,7 +393,7 @@
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.ts",
-        "hash": "4563808350056880036"
+        "hash": "5590290406039648793"
       },
       {
         "file": "src/app/calculators/calc-anual2/calc-anual2-routing.module.ts",
@@ -191,7 +405,7 @@
       },
       {
         "file": "src/app/calculators/calc-anual2/calc-anual2.page.html",
-        "hash": "7286124120367360533"
+        "hash": "15718749073779714500"
       },
       {
         "file": "src/app/calculators/calc-anual2/calc-anual2.page.scss",
@@ -239,11 +453,11 @@
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.html",
-        "hash": "9748701252770395546"
+        "hash": "1359874026130534508"
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.scss",
-        "hash": "3244421341483603138"
+        "hash": "10357238375488478404"
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.spec.ts",
@@ -251,7 +465,7 @@
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.ts",
-        "hash": "5084429944180650477"
+        "hash": "8914848318136507415"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad-routing.module.ts",
@@ -263,11 +477,11 @@
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.html",
-        "hash": "17471977089166582530"
+        "hash": "15105015029627575876"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.scss",
-        "hash": "3244421341483603138"
+        "hash": "3506447340215667011"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.spec.ts",
@@ -287,11 +501,11 @@
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.html",
-        "hash": "5849068348592697656"
+        "hash": "16040032642864079028"
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.scss",
-        "hash": "14715193705416433910"
+        "hash": "16659711221844453334"
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.spec.ts",
@@ -355,11 +569,11 @@
       },
       {
         "file": "src/app/tab2/tab2.page.html",
-        "hash": "13340392613393970086"
+        "hash": "1195150539776253086"
       },
       {
         "file": "src/app/tab2/tab2.page.scss",
-        "hash": "3244421341483603138"
+        "hash": "12989753179839764379"
       },
       {
         "file": "src/app/tab2/tab2.page.spec.ts",
@@ -367,7 +581,7 @@
       },
       {
         "file": "src/app/tab2/tab2.page.ts",
-        "hash": "1649071404575094014"
+        "hash": "11296290199416809425"
       },
       {
         "file": "src/app/tab3/tab3-routing.module.ts",
@@ -403,11 +617,11 @@
       },
       {
         "file": "src/app/tabs/tabs.page.html",
-        "hash": "10354490750562014135"
+        "hash": "8688837199892368529"
       },
       {
         "file": "src/app/tabs/tabs.page.scss",
-        "hash": "4055606894390288348"
+        "hash": "5039840527430119977"
       },
       {
         "file": "src/app/tabs/tabs.page.spec.ts",
@@ -448,6 +662,10 @@
       {
         "file": "src/assets/png/calc.png",
         "hash": "11115787397861901601"
+      },
+      {
+        "file": "src/assets/png/i.png",
+        "hash": "1601575726810529634"
       },
       {
         "file": "src/assets/png/mitad.png",

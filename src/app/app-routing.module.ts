@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'calculators',
     loadChildren: () => import('./calculators/calculators.module').then( m => m.CalculatorsPageModule)
+  },
+  {
+    path: 'cronograma/:idRuc',
+    loadChildren: () => import('./cronograma/cronograma.module').then( m => m.CronogramaPageModule)
   }
 ];
 @NgModule({

@@ -1,0 +1,61 @@
+.top3 {
+  background: #e4ecf7;
+}
+ion-content {
+  --background: url("./../../assets/png/base.png") 0 0/100% 100% no-repeat;
+  --ion-background-color: #f9fbfc;
+  .top {
+    padding: 0px;
+    .title {
+      text-align: center;
+      font-size: 30px;
+      padding-top: 110px;
+      padding-bottom: 230px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      color: #fff;
+    }
+    ion-item {
+      --padding-end: 0px;
+      --inner-padding-end: 0px;
+      // here other custom CSS from documentation
+    }
+    .item-has-focus {
+      color: #203680 !important;
+    }
+  }
+  .down {
+    padding-top: 20px;
+    .acordion {
+      width: 80%;
+      border-radius: 12px;
+      // background: linear-gradient(90deg, #0D2B56, #005AA3);
+      --ion-background-color: linear-gradient(90deg, #0d2b56, #005aa3);
+    }
+    .contenido {
+      --ion-background-color: #fff;
+      background: #fff;
+    }
+    ion-text {
+      text-align: center;
+      h1 {
+        margin: 0;
+        padding-top: 40px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        color: #203680;
+        margin-bottom: 35px;
+      }
+    }
+    ion-list {
+      ion-item {
+        ion-label {
+          font-size: 20px;
+          font-family: "Montserrat", sans-serif;
+          font-weight: bold;
+          color: #203680;
+        }
+      }
+    }
+  }
+}
