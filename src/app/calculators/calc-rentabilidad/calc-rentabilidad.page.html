@@ -9,8 +9,7 @@
       <ion-input
         inputmode="numeric"
         id="input-venta"
-        fill="outline"
-        placeholder="00.00"
+        placeholder="00,00"
         [(ngModel)]="costoValue"
         (ionInput)="handleCostoValue($event.target.value)"
       ></ion-input>
@@ -21,7 +20,6 @@
       <ion-input
         inputmode="numeric"
         id="input-igv"
-        fill="outline"
         placeholder="0"
         [(ngModel)]="porcentajeGanarValue"
         (ionInput)="handlePorcentajeGanarValue($event.target.value)"
@@ -33,14 +31,14 @@
       <ion-input
         inputmode="numeric"
         id="input-total"
-        fill="outline"
-        placeholder="00.00"
+        placeholder="00,00"
         [(ngModel)]="gananciaValue"
         readonly
       ></ion-input>
     </ion-item>
+    <ion-button expand="block" (click)="reset()">
+      <span style="padding-right: 16px;">REINICIAR</span><span>></span>
+    </ion-button> 
   </div>
-  <ion-button class="buttonReiniciar" expand="block" (click)="reset()">
-    <span style="padding-right: 16px;">REINICIAR</span><span>></span>
-  </ion-button>  
+   
 </ion-content>

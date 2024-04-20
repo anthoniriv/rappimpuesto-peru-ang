@@ -40,13 +40,14 @@ export class CalcRentabilidadPage implements OnInit {
       console.log("Division:", division);
       const ganancia = costoFloat / division;
       console.log("ganancia value:", ganancia);
-      this.gananciaValue = ganancia.toFixed(2);
-      console.log("Total value:", ganancia.toFixed(2));
+      this.gananciaValue = ganancia.toFixed(2).replace('.', ','); // Cambia el punto por una coma
+      console.log("Total value:", this.gananciaValue);
     } else {
       this.gananciaValue = "";
       console.log("Costo y porcentaje de ganancia deben ser números válidos.");
     }
-  }
+}
+
 
   reset() {
     this.costoValue = "";

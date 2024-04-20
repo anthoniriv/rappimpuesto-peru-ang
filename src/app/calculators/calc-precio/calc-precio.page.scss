@@ -21,7 +21,7 @@ ion-item {
       font-size: 16px;
       font-weight: bold;
       color: #03335e;
-      margin-top: 20px;
+      margin-top: 10px;
       margin-left: 40px;
     }
     ion-button.btnInfo {
@@ -39,6 +39,7 @@ ion-item {
     }
 
     ion-item {
+      margin-top: -15px;
       --background: #ffffff;
       --border-radius: 15px;
       --min-height: 50px;
