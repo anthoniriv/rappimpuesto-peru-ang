@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-unica.page.scss'],
 })
 export class CalcUnicaPage implements OnInit {
-  venta: string = "00,00";
-  igv: string = "00,00";
-  total: string = "00,00";
+  venta: string = "";
+  igv: string = "";
+  total: string = "";
 
   isTouchedVenta = false;
   isTouchedIgv = false;
@@ -21,29 +21,29 @@ export class CalcUnicaPage implements OnInit {
   }
 
   clearAll() {
-    this.venta = "00,00";
-    this.igv = "00,00";
-    this.total = "00,00";
-    this.isTouchedVenta = false;
-    this.isTouchedIgv = false;
-    this.isTouchedTotal = false;
+    this.venta = "";
+    this.igv = "";
+    this.total = "";
+    this.resetTouches();
   }
 
   getVenta(valor: string) {
     this.venta = this.normalizeAndFormat(valor);
     this.calculateFigures();
+    this.focusInputVenta();
   }
   
   getIgv(valor: string) {
+    // If IGV is manually changed, we might not want to recalculate it automatically.
     this.igv = this.normalizeAndFormat(valor);
-    this.calculateFigures();
+    this.focusInputIgv();
   }
   
   getTotal(valor: string) {
     this.total = this.normalizeAndFormat(valor);
-    this.calculateFigures();
+    this.focusInputTotal();
   }
-  
+
   normalizeAndFormat(value: string): string {
     const normalizedValue = this.parseValue(value);
     return this.formatValue(normalizedValue);
@@ -56,24 +56,30 @@ export class CalcUnicaPage implements OnInit {
   formatValue(value: number): string {
     return value.toFixed(2).replace('.', ',');
   }
-  
+
+  calculateFigures() {
+    const ventaNumber = this.parseValue(this.venta);
+    // Calculate IGV based on the venta if venta input is the last touched.
+    if (this.isTouchedVenta) {
+      const igvCalculated = ventaNumber * 0.18;
+      this.igv = this.formatValue(igvCalculated);
+      this.total = this.formatValue(ventaNumber + igvCalculated);
+    }
+  }
 
   focusInputVenta() {
+    this.resetTouches();
     this.isTouchedVenta = true;
-    this.isTouchedIgv = false;
-    this.isTouchedTotal = false;
   }
 
   focusInputIgv() {
+    this.resetTouches();
     this.isTouchedIgv = true;
-    this.isTouchedVenta = false;
-    this.isTouchedTotal = false;
   }
 
   focusInputTotal() {
+    this.resetTouches();
     this.isTouchedTotal = true;
-    this.isTouchedVenta = false;
-    this.isTouchedIgv = false;
   }
 
   unfocusInputVenta() {
@@ -88,16 +94,11 @@ export class CalcUnicaPage implements OnInit {
     this.isTouchedTotal = false;
   }
 
-  calculateFigures() {
-    const ventaNumber = this.parseValue(this.venta);
-    const igvNumber = this.parseValue(this.igv);
-    if (!isNaN(ventaNumber) && !isNaN(igvNumber)) {
-      this.igv = this.formatValue(ventaNumber * 0.18);
-      this.total = this.formatValue(ventaNumber + ventaNumber * 0.18);
-    }
+  resetTouches() {
+    this.isTouchedVenta = false;
+    this.isTouchedIgv = false;
+    this.isTouchedTotal = false;
   }
-
- 
 
   reset() {
     this.clearAll();

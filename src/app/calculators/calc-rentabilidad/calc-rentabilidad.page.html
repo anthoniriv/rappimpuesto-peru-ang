@@ -1,6 +1,6 @@
 <ion-content fullscreen="true">
   <div class="top2">
-    <img src="./../../../assets/png/top2.png" alt="" />
+    <img src="./../../../assets/png/top2.png" alt="Encabezado Decorativo" />
   </div>
   <div class="main">
     <h2 class="labels">Mis Costos</h2>
@@ -11,7 +11,7 @@
         id="input-venta"
         placeholder="00,00"
         [(ngModel)]="costoValue"
-        (ionInput)="handleCostoValue($event.target.value)"
+        (ionChange)="handleCostoValue($event.detail.value ?? '')"
       ></ion-input>
     </ion-item>
     <h2 class="labels">Porcentaje que quiero ganar</h2>
@@ -20,9 +20,9 @@
       <ion-input
         inputmode="numeric"
         id="input-igv"
-        placeholder="0"
+        placeholder="00,00"
         [(ngModel)]="porcentajeGanarValue"
-        (ionInput)="handlePorcentajeGanarValue($event.target.value)"
+        (ionChange)="handlePorcentajeGanarValue($event.detail.value ?? '')"
       ></ion-input>
     </ion-item>
     <h2 class="labels">Ganancia</h2>
@@ -37,8 +37,7 @@
       ></ion-input>
     </ion-item>
     <ion-button expand="block" (click)="reset()">
-      <span style="padding-right: 16px;">REINICIAR</span><span>></span>
+      Reiniciar
     </ion-button> 
   </div>
-   
 </ion-content>
