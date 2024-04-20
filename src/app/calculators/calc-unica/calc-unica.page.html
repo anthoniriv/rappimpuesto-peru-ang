@@ -1,6 +1,6 @@
 <ion-content fullscreen="true">
   <div class="top2">
-    <img src="./../../../assets/png/top2.png" alt="" />
+    <img src="./../../../assets/png/top2.png" alt="Encabezado Decorativo" />
   </div>
   <div class="main">
     <h2 class="labels">Sub Total</h2>
@@ -9,11 +9,9 @@
       <ion-input
         inputmode="numeric"
         id="input-venta"
-        placeholder="00,00"
+        placeholder=""
         [(ngModel)]="venta"
-        (ionFocus)="focusInputVenta('input-venta')"
-        (ionBlur)="unfocusInputVenta('input-venta')"
-        (ionChange)="getVenta($event.target.value)"
+        (ionChange)="getVenta($event.detail.value ?? '')"
       ></ion-input>
     </ion-item>
     <h2 class="labels">IGV</h2>
@@ -22,11 +20,9 @@
       <ion-input
         inputmode="numeric"
         id="input-igv"
-        placeholder="0"
+        placeholder=""
         [(ngModel)]="igv"
-        (ionFocus)="focusInputIgv('input-igv')"
-        (ionBlur)="unfocusInputIgv('input-igv')"
-        (ionChange)="getIgv($event.target.value)"
+        (ionChange)="getVenta($event.detail.value ?? '')"
       ></ion-input>
     </ion-item>
     <h2 class="labels">Total de Ventas</h2>
@@ -35,16 +31,13 @@
       <ion-input
         inputmode="numeric"
         id="input-total"
-        [(ngModel)]="total"
         placeholder="00,00"
-        (ionFocus)="focusInputTotal('input-total')"
-        (ionBlur)="unfocusInputTotal('input-total')"
-        (ionChange)="getTotal($event.target.value)"
+        [(ngModel)]="total"
         readonly
       ></ion-input>
     </ion-item>
     <ion-button expand="block" (click)="reset()">
-      <span style="padding-right: 16px">REINICIAR</span>
+      Reiniciar
     </ion-button>
   </div>
 </ion-content>
