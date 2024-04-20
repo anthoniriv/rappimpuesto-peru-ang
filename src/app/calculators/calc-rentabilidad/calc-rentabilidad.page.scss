@@ -1,19 +1,24 @@
-ion-content {
-  --background: url("../../../assets/png/Base.png") 0 0/100% 95% no-repeat;
-  background-size: cover;
-}
 .top2 {
   background: #e4ecf7;
-  height: 260px;
-  background-size: cover;
+}
+ion-item {
+  --background: rgba(32, 54, 128, 0);
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.178));
 }
 .main {
+  --background: url("./../../../assets/png/base.png") 0 0/100% 100% no-repeat;
+  --ion-background-color: #f4f5f8;
   display: flex;
-  gap: 1px;
-  margin: 20px;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+}
+.main2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 .labels {
   color: #03335e;

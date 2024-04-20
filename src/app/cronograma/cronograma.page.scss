@@ -1,6 +1,10 @@
 .main {
   --background: url("../../assets/png/5.jpg") 0 0/100% 100% no-repeat;
   --ion-background-color: #f9fbfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .top {
     padding-top: 20px;
     padding-left: 20px;
