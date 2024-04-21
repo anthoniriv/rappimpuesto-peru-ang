@@ -309,11 +309,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "14764761934254548337"
+        "hash": "8829390860520680286"
       },
       {
         "file": "package.json",
-        "hash": "536848576291026150"
+        "hash": "14469448081479072811"
       },
       {
         "file": "resources/icon.png",
@@ -325,11 +325,11 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "15119391054173024188"
+        "hash": "12678735519691977569"
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "12139992690072916112"
+        "hash": "14111051472155995861"
       },
       {
         "file": "src/app/app.component.scss",
@@ -345,7 +345,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "17195997832060172707"
+        "hash": "13947329866514205405"
       },
       {
         "file": "src/app/calculadoras/calculadoras-routing.module.ts",
@@ -381,11 +381,11 @@
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.html",
-        "hash": "11438097667886334940"
+        "hash": "7994716577450771848"
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.scss",
-        "hash": "10994488847253047092"
+        "hash": "6843159030482829837"
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.spec.ts",
@@ -405,7 +405,7 @@
       },
       {
         "file": "src/app/calculators/calc-anual2/calc-anual2.page.html",
-        "hash": "15718749073779714500"
+        "hash": "16017090228191557092"
       },
       {
         "file": "src/app/calculators/calc-anual2/calc-anual2.page.scss",
@@ -429,11 +429,11 @@
       },
       {
         "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.html",
-        "hash": "5427098951967044466"
+        "hash": "12481476956881378447"
       },
       {
         "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.scss",
-        "hash": "14045104402068735251"
+        "hash": "17533356737843123685"
       },
       {
         "file": "src/app/calculators/calc-cuarta/calc-cuarta.page.spec.ts",
@@ -453,11 +453,11 @@
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.html",
-        "hash": "1359874026130534508"
+        "hash": "2554332865810164011"
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.scss",
-        "hash": "10357238375488478404"
+        "hash": "5077506346323476477"
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.spec.ts",
@@ -477,11 +477,11 @@
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.html",
-        "hash": "15105015029627575876"
+        "hash": "7758648428364617491"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.scss",
-        "hash": "3506447340215667011"
+        "hash": "4410414372531459261"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.spec.ts",
@@ -489,7 +489,7 @@
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.ts",
-        "hash": "10641810318897295603"
+        "hash": "3612431388258799173"
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica-routing.module.ts",
@@ -501,11 +501,11 @@
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.html",
-        "hash": "16040032642864079028"
+        "hash": "124588943011427319"
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.scss",
-        "hash": "16659711221844453334"
+        "hash": "4410414372531459261"
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.spec.ts",
@@ -513,7 +513,7 @@
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica.page.ts",
-        "hash": "15140136934878644404"
+        "hash": "18405255500649979067"
       },
       {
         "file": "src/app/calculators/calculators-routing.module.ts",
@@ -540,6 +540,34 @@
         "hash": "11320208905356686703"
       },
       {
+        "file": "src/app/cronograma/cronograma-routing.module.ts",
+        "hash": "612250200932261378"
+      },
+      {
+        "file": "src/app/cronograma/cronograma.module.ts",
+        "hash": "16855600092153813177"
+      },
+      {
+        "file": "src/app/cronograma/cronograma.page.html",
+        "hash": "14170127155786784265"
+      },
+      {
+        "file": "src/app/cronograma/cronograma.page.scss",
+        "hash": "9890826187993471320"
+      },
+      {
+        "file": "src/app/cronograma/cronograma.page.spec.ts",
+        "hash": "16522059784533763482"
+      },
+      {
+        "file": "src/app/cronograma/cronograma.page.ts",
+        "hash": "17190426766246359071"
+      },
+      {
+        "file": "src/app/cronograma/ruc.model.ts",
+        "hash": "2664473961930892832"
+      },
+      {
         "file": "src/app/explore-container/explore-container.component.html",
         "hash": "10574455846506954855"
       },
@@ -560,6 +588,22 @@
         "hash": "7418061059857182964"
       },
       {
+        "file": "src/app/services/crono.service.spec.ts",
+        "hash": "15118975092692167541"
+      },
+      {
+        "file": "src/app/services/crono.service.ts",
+        "hash": "17921418320992271963"
+      },
+      {
+        "file": "src/app/services/savedata.service.spec.ts",
+        "hash": "16025739054093506544"
+      },
+      {
+        "file": "src/app/services/savedata.service.ts",
+        "hash": "7769194171961641355"
+      },
+      {
         "file": "src/app/tab2/tab2-routing.module.ts",
         "hash": "7350080520046749647"
       },
@@ -569,11 +613,11 @@
       },
       {
         "file": "src/app/tab2/tab2.page.html",
-        "hash": "1195150539776253086"
+        "hash": "13900755368995077285"
       },
       {
         "file": "src/app/tab2/tab2.page.scss",
-        "hash": "12989753179839764379"
+        "hash": "2784900287912871783"
       },
       {
         "file": "src/app/tab2/tab2.page.spec.ts",
@@ -593,11 +637,11 @@
       },
       {
         "file": "src/app/tab3/tab3.page.html",
-        "hash": "1640442279298071434"
+        "hash": "9685180247942651168"
       },
       {
         "file": "src/app/tab3/tab3.page.scss",
-        "hash": "3244421341483603138"
+        "hash": "15460836173137193552"
       },
       {
         "file": "src/app/tab3/tab3.page.spec.ts",
@@ -605,7 +649,7 @@
       },
       {
         "file": "src/app/tab3/tab3.page.ts",
-        "hash": "9950996585213729156"
+        "hash": "11213003525870644528"
       },
       {
         "file": "src/app/tabs/tabs-routing.module.ts",
@@ -658,6 +702,10 @@
       {
         "file": "src/assets/png/Base.png",
         "hash": "16896647641254086407"
+      },
+      {
+        "file": "src/assets/png/RAPimpuestos_002.png",
+        "hash": "11610696108490319008"
       },
       {
         "file": "src/assets/png/calc.png",

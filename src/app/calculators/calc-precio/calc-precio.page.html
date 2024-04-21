@@ -1,4 +1,3 @@
-
 <ion-content fullscreen="true" class="main">
   <div class="top2">
     <img src="../../../assets/png/top2.png" alt="" />
@@ -125,7 +124,7 @@
       <ion-alert
         trigger="ganancia2-alert"
         header="Información"
-        message="Crédito fiscal - igv a pagar."
+        message="Crédito fiscal"
         [buttons]="alertButtons"
       ></ion-alert>
     </h2>
@@ -135,6 +134,29 @@
         inputmode="numeric"
         position="floating"
         [value]="ganancia2"
+        readonly
+        disabled="true"
+        placeholder="00.00"
+      ></ion-input>
+    </ion-item>
+    <h2 class="labels">
+      IGV Final
+      <ion-button class="btnInfo" id="igvfinal-alert" color="#f4f5f8">
+        <img class="pop" src="../../../assets/png/i.png" />
+      </ion-button>
+      <ion-alert
+        trigger="igvfinal-alert"
+        header="Información"
+        message="Monto que resulta del credito fiscal a favor, menos el IGV generado."
+        [buttons]="alertButtons"
+      ></ion-alert>
+    </h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="start" class="solesLabel"> S/ </ion-label>
+      <ion-input
+        inputmode="numeric"
+        position="floating"
+        [value]="igvfinal"
         readonly
         disabled="true"
         placeholder="00.00"

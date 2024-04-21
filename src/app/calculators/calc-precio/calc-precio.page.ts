@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-precio.page.scss'],
 })
 export class CalcPrecioPage implements OnInit {
-  compras: string = "";
-  gastos: string = "";
-  ganancia1: string = "";
-  igv: string = "";
-  precio: string = "";
-  ganancia2: string = "";
+  compras: string = '';
+  gastos: string = '';
+  ganancia1: string = '';
+  igv: string = '';
+  precio: string = '';
+  ganancia2: string = '';
+  igvfinal: string = '';
   showPopover: boolean = false;
-  popoverContent: string = "";
+  popoverContent: string = '';
   alertButtons = ['Entendido'];
-
 
   handleInfoClick(content: any) {
     this.popoverContent = content;
@@ -39,11 +39,11 @@ export class CalcPrecioPage implements OnInit {
 
   calcularIGV(compras: string, gastos: string, ganancia1: string) {
     if (
-      compras !== "" &&
+      compras !== '' &&
       compras !== undefined &&
-      gastos !== "" &&
+      gastos !== '' &&
       gastos !== undefined &&
-      ganancia1 !== "" &&
+      ganancia1 !== '' &&
       ganancia1 !== undefined
     ) {
       const total =
@@ -54,29 +54,39 @@ export class CalcPrecioPage implements OnInit {
       const precioCalculado = total + igvCalculado;
       this.precio = precioCalculado.toFixed(2);
 
-      const creditoFiscal = parseFloat(compras) * 0.18;
-      const ganancia2Calculada = creditoFiscal - parseFloat(this.igv);
+      const creditoFiscalBase = parseFloat(compras) / 1.18;
+      console.log('Credito Fiscal Base: ' + creditoFiscalBase);
+      const creditoFiscal = parseFloat(compras) - creditoFiscalBase;
+      console.log('Credito Fiscal: ' + creditoFiscal);
+      let ganancia2Calculada = creditoFiscal;
+      //convertir en positivo si es negativo
+      if (ganancia2Calculada < 0) {
+        ganancia2Calculada = ganancia2Calculada * -1;
+      }
       this.ganancia2 = ganancia2Calculada.toFixed(2);
-      console.log("Precio: " + this.precio);
-      console.log("Ganancia2: " + this.ganancia2);
+      console.log('Precio: ' + this.precio);
+      console.log('Ganancia2: ' + this.ganancia2);
+      //IGV FINAL let ganancia2Calculada = creditoFiscal - parseFloat(this.igv);
+      let igvFinalCalculada = creditoFiscal - parseFloat(this.igv);
+      this.igvfinal = igvFinalCalculada.toFixed(2);
     } else {
-      this.igv = "";
-      this.precio = "";
-      this.ganancia2 = "";
+      this.igv = '';
+      this.precio = '';
+      this.ganancia2 = '';
     }
   }
 
   handleReset() {
-    this.compras = "";
-    this.gastos = "";
-    this.ganancia1 = "";
-    this.igv = "";
-    this.precio = "";
-    this.ganancia2 = "";
+    this.compras = '';
+    this.gastos = '';
+    this.ganancia1 = '';
+    this.igv = '';
+    this.precio = '';
+    this.ganancia2 = '';
   }
 
   ngOnInit() {
     // Initialization code here
-    console.log("CalcPrecioPage initialized");
+    console.log('CalcPrecioPage initialized');
   }
 }
