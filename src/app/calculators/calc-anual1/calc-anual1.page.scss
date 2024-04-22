@@ -15,12 +15,15 @@ ion-item {
     justify-content: center;
     margin-bottom: 20px;
     .labels {
-      color: #03335e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
       font-size: 16px;
       font-weight: bold;
-      margin-top: 20px;
-      width: 80%;
-      text-align: left;
+      color: #03335e;
+      margin-top: 10px;
+      margin-left: 40px;
     }
     ion-item {
       --background: #ffffff;
