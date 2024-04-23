@@ -37,8 +37,18 @@
         disabled="true"
       ></ion-input>
     </ion-item>
-    <ion-button expand="block" (click)="reset()">
-      Reiniciar
-    </ion-button> 
+    <h2 class="labels">Total a Cobrar</h2>
+    <ion-item class="inputs" lines="none">
+      <ion-label position="fixed">S/</ion-label>
+      <ion-input
+        inputmode="numeric"
+        id="input-total"
+        placeholder="00,00"
+        [(ngModel)]="totalCobrarValue"
+        readonly
+        disabled="true"
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="reset()"> Reiniciar </ion-button>
   </div>
 </ion-content>

@@ -6,20 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-rentabilidad.page.scss'],
 })
 export class CalcRentabilidadPage implements OnInit {
-  costoValue: any = "";
-  porcentajeGanarValue: any = "";
-  gananciaValue: any = "";
+  costoValue: any = '';
+  porcentajeGanarValue: any = '';
+  gananciaValue: any = '';
+  totalCobrarValue: any = '';
 
   handleCostoValue(value: any) {
     this.costoValue = value;
     this.handleGananciaValue(value, this.porcentajeGanarValue);
-    console.log("Venta value:", value);
+    console.log('Venta value:', value);
   }
 
   handlePorcentajeGanarValue(value: any) {
     this.porcentajeGanarValue = value;
     this.handleGananciaValue(this.costoValue, value);
-    console.log("IGV value:", value);
+    console.log('IGV value:', value);
   }
 
   handleGananciaValue(costo: string, porcentajeGanar: string) {
@@ -27,37 +28,38 @@ export class CalcRentabilidadPage implements OnInit {
     const porcentajeGanarFloat = parseFloat(porcentajeGanar);
 
     if (
-      costo !== "" &&
+      costo !== '' &&
       !isNaN(costoFloat) &&
-      porcentajeGanar !== "" &&
+      porcentajeGanar !== '' &&
       !isNaN(porcentajeGanarFloat)
     ) {
-      console.log("Costo:", costoFloat);
-      console.log("Porcentaje de ganancia:", porcentajeGanarFloat);
+      console.log('Costo:', costoFloat);
+      console.log('Porcentaje de ganancia:', porcentajeGanarFloat);
       let porcentaje = porcentajeGanarFloat / 100;
-      console.log("Porcentaje:", porcentaje);
+      console.log('Porcentaje:', porcentaje);
       let division = 1 - porcentaje;
-      console.log("Division:", division);
+      console.log('Division:', division);
       const ganancia = costoFloat / division;
-      console.log("ganancia value:", ganancia);
-      this.gananciaValue = ganancia.toFixed(2).replace('.', ','); // Cambia el punto por una coma
-      console.log("Total value:", this.gananciaValue);
+      console.log('ganancia value:', ganancia);
+      this.totalCobrarValue = ganancia.toFixed(2).replace('.', ',');
+      this.gananciaValue = (ganancia - costoFloat).toFixed(2).replace('.', ',');
+      console.log('Total value:', this.gananciaValue);
     } else {
-      this.gananciaValue = "";
-      console.log("Costo y porcentaje de ganancia deben ser números válidos.");
+      this.totalCobrarValue = '';
+      this.gananciaValue = '';
+      console.log('Costo y porcentaje de ganancia deben ser números válidos.');
     }
-}
-
+  }
 
   reset() {
-    this.costoValue = "";
-    this.porcentajeGanarValue = "";
-    this.gananciaValue = "";
-    console.log("Reset button clicked");
+    this.costoValue = '';
+    this.porcentajeGanarValue = '';
+    this.gananciaValue = '';
+    console.log('Reset button clicked');
   }
 
   ngOnInit() {
     // Initialization code here
-    console.log("CalcRentabilidadPage initialized");
+    console.log('CalcRentabilidadPage initialized');
   }
 }
