@@ -54,7 +54,18 @@ export class CalcAnual1Page implements OnInit {
   }
 
   //
+  normalizeAndFormat(value: string): string {
+    const normalizedValue = this.parseValue(value);
+    return this.formatValue(normalizedValue);
+  }
 
+  parseValue(value: string): number {
+    return parseFloat(value.replace(',', '.'));
+  }
+
+  formatValue(value: number): string {
+    return value.toFixed(2).replace('.', ',');
+  }
   clearAll() {
     this.venta = '';
     this.igv = '';

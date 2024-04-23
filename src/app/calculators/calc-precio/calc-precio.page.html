@@ -21,8 +21,8 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        (ionInput)="handleChangeCompras($event.target.value)"
-        [value]="compras"
+        (ionChange)="handleChangeCompras($event.detail.value ?? '')"
+        [(ngModel)]="compras"
         placeholder="00.00"
       ></ion-input>
     </ion-item>
@@ -43,8 +43,8 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        (ionInput)="handleChangeGastos($event.target.value)"
-        [value]="gastos"
+        (ionChange)="handleChangeGastos($event.detail.value ?? '')"
+        [(ngModel)]="gastos"
         placeholder="00.00"
       ></ion-input>
     </ion-item>
@@ -65,8 +65,8 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        (ionInput)="handleChangeGanancia1($event.target.value)"
-        [value]="ganancia1"
+        (ionChange)="handleChangeGanancia1($event.detail.value ?? '')"
+        [(ngModel)]="ganancia1"
         placeholder="00.00"
       ></ion-input>
     </ion-item>
@@ -87,7 +87,7 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        [value]="igv"
+        [(ngModel)]="igv"
         readonly
         disabled="true"
         placeholder="00.00"
@@ -110,7 +110,7 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        [value]="precio"
+        [(ngModel)]="precio"
         readonly
         disabled="true"
         placeholder="00.00"
@@ -133,7 +133,7 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        [value]="ganancia2"
+        [(ngModel)]="ganancia2"
         readonly
         disabled="true"
         placeholder="00.00"
@@ -156,7 +156,7 @@
       <ion-input
         inputmode="numeric"
         position="floating"
-        [value]="igvfinal"
+        [(ngModel)]="igvfinal"
         readonly
         disabled="true"
         placeholder="00.00"

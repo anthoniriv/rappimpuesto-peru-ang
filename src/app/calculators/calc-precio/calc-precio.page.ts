@@ -21,19 +21,31 @@ export class CalcPrecioPage implements OnInit {
     this.popoverContent = content;
     this.showPopover = true;
   }
+  normalizeAndFormat(value: string): string {
+    const normalizedValue = this.parseValue(value);
+    return this.formatValue(normalizedValue);
+  }
 
-  handleChangeCompras(value: any) {
-    this.compras = value;
+  parseValue(value: string): number {
+    return parseFloat(value.replace(',', '.'));
+  }
+
+  formatValue(value: number): string {
+    return value.toFixed(2).replace('.', ',');
+  }
+
+  handleChangeCompras(value: string) {
+    this.compras = this.normalizeAndFormat(value);
     this.calcularIGV(value, this.gastos, this.ganancia1);
   }
 
-  handleChangeGastos(value: any) {
-    this.gastos = value;
+  handleChangeGastos(value: string) {
+    this.gastos = this.normalizeAndFormat(value);
     this.calcularIGV(this.compras, value, this.ganancia1);
   }
 
-  handleChangeGanancia1(value: any) {
-    this.ganancia1 = value;
+  handleChangeGanancia1(value: string) {
+    this.ganancia1 = this.normalizeAndFormat(value);
     this.calcularIGV(this.compras, this.gastos, value);
   }
 
@@ -47,28 +59,33 @@ export class CalcPrecioPage implements OnInit {
       ganancia1 !== undefined
     ) {
       const total =
-        parseFloat(compras) + parseFloat(gastos) + parseFloat(ganancia1);
+        this.parseValue(compras) +
+        this.parseValue(gastos) +
+        this.parseValue(ganancia1);
       const igvCalculado = total * 0.18;
-      this.igv = igvCalculado.toFixed(2);
+      this.igv = this.formatValue(igvCalculado);
 
       const precioCalculado = total + igvCalculado;
-      this.precio = precioCalculado.toFixed(2);
+      this.precio = this.formatValue(precioCalculado);
 
-      const creditoFiscalBase = parseFloat(compras) / 1.18;
+      const creditoFiscalBase = this.parseValue(compras) / 1.18;
       console.log('Credito Fiscal Base: ' + creditoFiscalBase);
-      const creditoFiscal = parseFloat(compras) - creditoFiscalBase;
+      const creditoFiscal = this.parseValue(compras) - creditoFiscalBase;
       console.log('Credito Fiscal: ' + creditoFiscal);
       let ganancia2Calculada = creditoFiscal;
       //convertir en positivo si es negativo
       if (ganancia2Calculada < 0) {
         ganancia2Calculada = ganancia2Calculada * -1;
       }
-      this.ganancia2 = ganancia2Calculada.toFixed(2);
+      this.ganancia2 = this.formatValue(ganancia2Calculada);
       console.log('Precio: ' + this.precio);
       console.log('Ganancia2: ' + this.ganancia2);
       //IGV FINAL let ganancia2Calculada = creditoFiscal - parseFloat(this.igv);
-      let igvFinalCalculada = creditoFiscal - parseFloat(this.igv);
-      this.igvfinal = igvFinalCalculada.toFixed(2);
+      let igvFinalCalculada = creditoFiscal - this.parseValue(this.igv);
+      if (igvFinalCalculada < 0) {
+        igvFinalCalculada = igvFinalCalculada * -1;
+      }
+      this.igvfinal = this.formatValue(igvFinalCalculada);
     } else {
       this.igv = '';
       this.precio = '';
