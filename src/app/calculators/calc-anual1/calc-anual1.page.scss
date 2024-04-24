@@ -31,31 +31,26 @@ ion-item {
       --min-height: 50px;
       width: 80%;
       display: flex;
+      flex-direction: column;
       align-items: center;
     }
+
     ion-label {
       font-size: 16px;
-      width: 10%;
-      margin-right: -30px;
-      color: black !important;
+      color: black;
+      width: 100%;
+      text-align: center;
     }
+
     ion-input {
       width: 90%;
       font-size: 16px;
       color: #000000;
       --padding-start: 5px;
-      flex: 5;
+      flex: none;
       --background: #ffffff;
       --border-radius: 15px;
       border: none;
-    }
-    ion-button {
-      margin-top: -100px;
-      padding: auto;
-      margin: auto;
-      width: 80%;
-      color: white;
-      --background: linear-gradient(90deg, #0d2b56, #005aa3);
     }
   }
 
@@ -63,7 +58,7 @@ ion-item {
     width: 80%;
     margin: 25px auto;
     display: flex;
-    flex-direction: row; /* Invierte el orden de los elementos dentro del flex container */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -71,36 +66,36 @@ ion-item {
     border-radius: 12px;
     background: linear-gradient(90deg, #0d2b56, #005aa3);
     color: #fff;
-    box-sizing: border-box; /* Incluye el padding y border en la medida del ancho y alto */
+    box-sizing: border-box;
   }
 
   .tipoRegi {
-    flex: 1; /* Ocupa el espacio disponible */
-    text-align: left; /* Alinea el texto a la derecha */
+    flex: 1;
+    text-align: left;
     font-size: 16px;
+    color: #fff !important;
     white-space: normal;
     line-height: 1.2;
-    max-width: 150px; /* Limita el ancho máximo para forzar el salto de línea */
+    max-width: 150px;
     word-wrap: break-word;
   }
 
-  p{
+  p {
     margin-left: 10px;
     margin-right: 0px;
   }
 
   .tipoSelect {
-    flex: 1; /* Ocupa el espacio disponible */
-    text-align: right; /* Alinea el texto a la derecha */
+    flex: 1;
+    text-align: right;
     font-size: 16px;
-    white-space: normal; /* Evita que el texto se desborde horizontalmente */
-    overflow: hidden; /* Oculta cualquier texto que se desborde del contenedor */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) si el texto está truncado */
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis; //texto truncado
     line-height: 1.2;
-    max-height: calc(1.2em * 3); /* Altura máxima para dos líneas */
-    max-width: 200px; /* Ajusta el ancho máximo según sea necesario */
-}
-
+    max-height: calc(1.2em * 3);
+    max-width: 200px;
+  }
 
   .button {
     margin-top: 20px !important;
