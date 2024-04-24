@@ -3,29 +3,66 @@
     <img src="./../../../assets/png/top2.png" alt="Encabezado Decorativo" />
   </div>
   <div class="main2">
-    <h2 class="labels">Mis Costos</h2>
+    <h2 class="labels">
+      Mis Costos
+      <ion-button class="btnInfo" id="costos-alert" color="#f4f5f8">
+        <img class="pop" src="../../../assets/png/i.png" />
+      </ion-button>
+      <ion-alert
+        trigger="costos-alert"
+        header="Información"
+        message="Son mis gastos fijos y gastos variables ."
+        [buttons]="alertButtons"
+      ></ion-alert>
+    </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-venta"
         placeholder="00,00"
         [(ngModel)]="costoValue"
-        (ionChange)="handleCostoValue($event.detail.value ?? '')"
-      ></ion-input>
+        (keyup.enter)="handleCostoValue($event.target)"
+        (blur)="handleCostoValue($event.target)"
+        [maskito]="maskito"
+      />
     </ion-item>
-    <h2 class="labels">Porcentaje que quiero ganar</h2>
+    <h2 class="labels">
+      Porcentaje que quiero ganar
+      <ion-button class="btnInfo" id="porcentaje-alert" color="#f4f5f8">
+        <img class="pop" src="../../../assets/png/i.png" />
+      </ion-button>
+      <ion-alert
+        trigger="porcentaje-alert"
+        header="Información"
+        message="Aquí pondremos % de ganancia según nuestra política de negocio."
+        [buttons]="alertButtons"
+      ></ion-alert>
+    </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">%</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-igv"
         placeholder="00,00"
         [(ngModel)]="porcentajeGanarValue"
-        (ionChange)="handlePorcentajeGanarValue($event.detail.value ?? '')"
-      ></ion-input>
+        (keyup.enter)="handlePorcentajeGanarValue($event.target)"
+        (blur)="handlePorcentajeGanarValue($event.target)"
+        [maskito]="maskito"
+      />
     </ion-item>
-    <h2 class="labels">Ganancia</h2>
+    <h2 class="labels">
+      Ganancia
+      <ion-button class="btnInfo" id="ganancia-alert" color="#f4f5f8">
+        <img class="pop" src="../../../assets/png/i.png" />
+      </ion-button>
+      <ion-alert
+        trigger="ganancia-alert"
+        header="Información"
+        message="Monto que representa lo que ganaremos."
+        [buttons]="alertButtons"
+      ></ion-alert>
+    </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
       <ion-input
@@ -37,7 +74,18 @@
         disabled="true"
       ></ion-input>
     </ion-item>
-    <h2 class="labels">Total a Cobrar</h2>
+    <h2 class="labels">
+      SubTotal a Cobrar
+      <ion-button class="btnInfo" id="subtotal-alert" color="#f4f5f8">
+        <img class="pop" src="../../../assets/png/i.png" />
+      </ion-button>
+      <ion-alert
+        trigger="subtotal-alert"
+        header="Información"
+        message="Esto representa el resultado a cobrar sin igv."
+        [buttons]="alertButtons"
+      ></ion-alert>
+    </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
       <ion-input

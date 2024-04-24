@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { maskitoNumberOptionsGenerator, maskitoParseNumber } from '@maskito/kit';
 
 @Component({
   selector: 'app-calc-rentabilidad',
@@ -6,26 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-rentabilidad.page.scss'],
 })
 export class CalcRentabilidadPage implements OnInit {
+  protected readonly maskito = maskitoNumberOptionsGenerator({
+    decimalSeparator: '.',
+    thousandSeparator: ',',
+    precision: 2,
+  });
+
   costoValue: any = '';
   porcentajeGanarValue: any = '';
   gananciaValue: any = '';
   totalCobrarValue: any = '';
+  alertButtons = ['Entendido'];
 
   handleCostoValue(value: any) {
-    this.costoValue = value;
-    this.handleGananciaValue(value, this.porcentajeGanarValue);
-    console.log('Venta value:', value);
+    this.costoValue = maskitoParseNumber(value.value);
+    this.handleGananciaValue(this.costoValue, this.porcentajeGanarValue);
+    console.log('Venta value:', value.value);
   }
 
   handlePorcentajeGanarValue(value: any) {
-    this.porcentajeGanarValue = value;
-    this.handleGananciaValue(this.costoValue, value);
-    console.log('IGV value:', value);
+    this.porcentajeGanarValue = maskitoParseNumber(value.value);
+    this.handleGananciaValue(this.costoValue, this.porcentajeGanarValue);
+    console.log('IGV value:', value.value);
   }
 
-  handleGananciaValue(costo: string, porcentajeGanar: string) {
-    const costoFloat = parseFloat(costo);
-    const porcentajeGanarFloat = parseFloat(porcentajeGanar);
+  handleGananciaValue(costo: any, porcentajeGanar: any) {
+    const costoFloat = costo;
+    const porcentajeGanarFloat = porcentajeGanar;
 
     if (
       costo !== '' &&
