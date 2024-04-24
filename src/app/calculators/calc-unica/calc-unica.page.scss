@@ -42,7 +42,8 @@ ion-label {
   margin-right: -80px;
   color: black !important;
 }
-ion-input {
+ion-input,
+input {
   width: 90%;
   font-size: 16px;
   color: #000000;
@@ -51,6 +52,15 @@ ion-input {
   --background: #ffffff;
   --border-radius: 15px;
   --border: none !important;
+}
+
+input {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+}
+*:focus {
+  outline: none;
 }
 ion-button {
   padding: auto;

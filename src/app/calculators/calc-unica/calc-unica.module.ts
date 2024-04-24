@@ -8,13 +8,16 @@ import { CalcUnicaPageRoutingModule } from './calc-unica-routing.module';
 
 import { CalcUnicaPage } from './calc-unica.page';
 
+import { MaskitoDirective } from '@maskito/angular';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalcUnicaPageRoutingModule
+    CalcUnicaPageRoutingModule,
+    MaskitoDirective,
   ],
-  declarations: [CalcUnicaPage]
+  declarations: [CalcUnicaPage],
 })
 export class CalcUnicaPageModule {}

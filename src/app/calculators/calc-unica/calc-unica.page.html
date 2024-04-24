@@ -6,39 +6,42 @@
     <h2 class="labels">Sub Total</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-venta"
         placeholder="00,00"
         [(ngModel)]="venta"
-        (ionChange)="getVenta($event.detail.value ?? '')"
-      ></ion-input>
+        (keyup.enter)="getVenta($event.target)"
+        (blur)="getVenta($event.target)"
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">IGV</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-igv"
         placeholder="00,00"
         [(ngModel)]="igv"
-        (ionChange)="getVenta($event.detail.value ?? '')"
-      ></ion-input>
+        readonly
+        disabled="true"
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Total de Ventas</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-total"
         placeholder="00,00"
         [(ngModel)]="total"
         readonly
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
-    <ion-button expand="block" (click)="reset()">
-      Reiniciar
-    </ion-button>
+    <ion-button expand="block" (click)="reset()"> Reiniciar </ion-button>
   </div>
 </ion-content>

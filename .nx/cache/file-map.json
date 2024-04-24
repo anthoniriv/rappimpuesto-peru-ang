@@ -19,6 +19,9 @@
     "@ionic/angular": "^8.0.0-rc.2",
     "@ionic/angular-server": "^8.0.0-rc.2",
     "@ionic/storage-angular": "^4.0.0",
+    "@maskito/angular": "^2.3.1",
+    "@maskito/core": "^2.3.1",
+    "@maskito/kit": "^2.3.1",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -309,11 +312,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "8829390860520680286"
+        "hash": "1440911004225914106"
       },
       {
         "file": "package.json",
-        "hash": "14469448081479072811"
+        "hash": "13539898723216841310"
       },
       {
         "file": "resources/icon.png",
@@ -381,11 +384,11 @@
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.html",
-        "hash": "7994716577450771848"
+        "hash": "12682698776647155359"
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.scss",
-        "hash": "6843159030482829837"
+        "hash": "1751137950166809670"
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.spec.ts",
@@ -393,7 +396,7 @@
       },
       {
         "file": "src/app/calculators/calc-anual1/calc-anual1.page.ts",
-        "hash": "5590290406039648793"
+        "hash": "14535430356965593575"
       },
       {
         "file": "src/app/calculators/calc-anual2/calc-anual2-routing.module.ts",
@@ -453,7 +456,7 @@
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.html",
-        "hash": "7704738888587759454"
+        "hash": "4785894086527223090"
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.scss",
@@ -465,7 +468,7 @@
       },
       {
         "file": "src/app/calculators/calc-precio/calc-precio.page.ts",
-        "hash": "13097004334168775141"
+        "hash": "11414129004401201185"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad-routing.module.ts",
@@ -477,7 +480,7 @@
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.html",
-        "hash": "7758648428364617491"
+        "hash": "4644211584494153608"
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.scss",
@@ -489,7 +492,7 @@
       },
       {
         "file": "src/app/calculators/calc-rentabilidad/calc-rentabilidad.page.ts",
-        "hash": "3612431388258799173"
+        "hash": "5019834882090775613"
       },
       {
         "file": "src/app/calculators/calc-unica/calc-unica-routing.module.ts",

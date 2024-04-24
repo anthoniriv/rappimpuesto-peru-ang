@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { MaskitoDirective } from '@maskito/angular';
+import type { MaskitoElementPredicate, MaskitoOptions } from '@maskito/core';
+
+import mask from './../masks';
+import {
+  maskitoNumberOptionsGenerator,
+  maskitoParseNumber,
+} from '@maskito/kit';
 
 @Component({
   selector: 'app-calc-unica',
@@ -6,9 +14,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-unica.page.scss'],
 })
 export class CalcUnicaPage implements OnInit {
-  venta: string = "";
-  igv: string = "";
-  total: string = "";
+  protected readonly maskito = maskitoNumberOptionsGenerator({
+    decimalSeparator: '.',
+    thousandSeparator: ',',
+    precision: 2,
+  });
+
+  venta: any = '';
+  igv: any = '';
+  total: any = '';
 
   isTouchedVenta = false;
   isTouchedIgv = false;
@@ -21,26 +35,30 @@ export class CalcUnicaPage implements OnInit {
   }
 
   clearAll() {
-    this.venta = "";
-    this.igv = "";
-    this.total = "";
+    this.venta = '';
+    this.igv = '';
+    this.total = '';
     this.resetTouches();
   }
 
-  getVenta(valor: string) {
-    this.venta = this.normalizeAndFormat(valor);
+  getVenta(valor: any) {
+    //borrar la coma
+    console.log('getVenta', valor.value);
+    this.venta = maskitoParseNumber(valor.value);
+    console.log('getVenta', valor);
+    console.log('getVenta', this.venta);
     this.calculateFigures();
     this.focusInputVenta();
   }
-  
-  getIgv(valor: string) {
+
+  getIgv(valor: any) {
     // If IGV is manually changed, we might not want to recalculate it automatically.
-    this.igv = this.normalizeAndFormat(valor);
+    this.igv = Number(valor);
     this.focusInputIgv();
   }
-  
-  getTotal(valor: string) {
-    this.total = this.normalizeAndFormat(valor);
+
+  getTotal(valor: any) {
+    this.total = Number(valor);
     this.focusInputTotal();
   }
 
@@ -48,37 +66,35 @@ export class CalcUnicaPage implements OnInit {
     const normalizedValue = this.parseValue(value);
     return this.formatValue(normalizedValue);
   }
-  
+
   parseValue(value: string): number {
     return parseFloat(value.replace(',', '.'));
   }
-  
+
   formatValue(value: number): string {
     return value.toFixed(2).replace('.', ',');
   }
 
   calculateFigures() {
-    const ventaNumber = this.parseValue(this.venta);
+    //this.venta recibe 10 000 000 conviertelo a 10000000
+    const ventaNumber = this.venta;
+    console.log('calculateFigures', ventaNumber);
     // Calculate IGV based on the venta if venta input is the last touched.
-    if (this.isTouchedVenta) {
-      const igvCalculated = ventaNumber * 0.18;
-      this.igv = this.formatValue(igvCalculated);
-      this.total = this.formatValue(ventaNumber + igvCalculated);
-    }
+    const igvCalculated = ventaNumber * 0.18;
+    this.igv = igvCalculated.toFixed(2);
+    const calculo = ventaNumber + igvCalculated;
+    this.total = calculo.toFixed(2);
   }
 
   focusInputVenta() {
-    this.resetTouches();
     this.isTouchedVenta = true;
   }
 
   focusInputIgv() {
-    this.resetTouches();
     this.isTouchedIgv = true;
   }
 
   focusInputTotal() {
-    this.resetTouches();
     this.isTouchedTotal = true;
   }
 

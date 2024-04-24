@@ -2575,6 +2575,33 @@
         "hash": "sha512-/gKJun8NNiWGZJkGzI/Ragc53cOdcLNdzjLaIa+GEjguQs0ulsurx8WN0jijdK9yPqDvziX995sMRLyLt1uZMQ=="
       }
     },
+    "npm:@maskito/angular": {
+      "type": "npm",
+      "name": "npm:@maskito/angular",
+      "data": {
+        "version": "2.3.1",
+        "packageName": "@maskito/angular",
+        "hash": "sha512-mt2DBojOc5ThYQlD1ZvnB9awCv2MrwSX3sIR8A6Al+XMhdzQ3ZOL3ayLkHsDvbDWt2jRijfKLtJN+Orzv0YgAA=="
+      }
+    },
+    "npm:@maskito/core": {
+      "type": "npm",
+      "name": "npm:@maskito/core",
+      "data": {
+        "version": "2.3.1",
+        "packageName": "@maskito/core",
+        "hash": "sha512-KmRGNK4g0hyXnLVKVlnCRfokPaRkOVEH4nMI8NK9p6cKPlRwC9V0l2MRxZKgBAhVvenQ8t5GM8xvl+wqOGUTFQ=="
+      }
+    },
+    "npm:@maskito/kit": {
+      "type": "npm",
+      "name": "npm:@maskito/kit",
+      "data": {
+        "version": "2.3.1",
+        "packageName": "@maskito/kit",
+        "hash": "sha512-AhW7IsEC4j2pg4qmGGFcVrcAx3PFYFKiza1vf5NRn7/2LU88/5uS6fIhKs6Uvdp3VzdNAHRQUOSVU2Ek13MOTA=="
+      }
+    },
     "npm:@ngtools/webpack": {
       "type": "npm",
       "name": "npm:@ngtools/webpack",
@@ -14425,6 +14452,35 @@
       {
         "source": "npm:@ljharb/through",
         "target": "npm:call-bind",
+        "type": "static"
+      }
+    ],
+    "npm:@maskito/angular": [
+      {
+        "source": "npm:@maskito/angular",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@maskito/angular",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "npm:@maskito/angular",
+        "target": "npm:@maskito/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@maskito/angular",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@maskito/kit": [
+      {
+        "source": "npm:@maskito/kit",
+        "target": "npm:@maskito/core",
         "type": "static"
       }
     ],
