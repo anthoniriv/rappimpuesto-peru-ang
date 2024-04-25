@@ -6,91 +6,92 @@
     <h2 class="labels">Total de Ventas</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-total"
-        (ionFocus)="focusInputTotal('input-total')"
-        (ionBlur)="unfocusInputTotal('input-total')"
-        (ionChange)="getTotal($event.detail.value ?? '')"
+        (blur)="getTotal($event.target)"
+        (keyup.enter)="getTotal($event.target)"
         [(ngModel)]="total"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">IGV a Pagar (Ventas)</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-igv"
-        (ionFocus)="focusInputIgv('input-igv')"
-        (ionBlur)="unfocusInputIgv('input-igv')"
-        (ionChange)="getIgv($event.detail.value ?? '')"
+        (blur)="getIgv($event.target)"
+        (keyup.enter)="getIgv($event.target)"
         [(ngModel)]="igv"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Sub Total (Ventas)</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-venta"
-        (ionFocus)="focusInputVenta('input-venta')"
-        (ionBlur)="unfocusInputVenta('input-venta')"
-        (ionChange)="getVenta($event.detail.value ?? '')"
+        (blur)="getVenta($event.target)"
+        (keyup.enter)="getVenta($event.target)"
         [(ngModel)]="venta"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Total de Compras</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-compra"
-        (ionFocus)="focusInputCompras('input-compra')"
-        (ionBlur)="unfocusInputCompras('input-compra')"
-        (ionChange)="getCompra($event.detail.value ?? '')"
+        (blur)="getCompra($event.target)"
+        (keyup.enter)="getCompra($event.target)"
         [(ngModel)]="compras"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">IGV/CRED. Fiscal</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-igv"
-        (ionFocus)="focusInputIgv('input-igv')"
         (ionBlur)="unfocusInputIgv('input-igv')"
         [(ngModel)]="creditofiscal"
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Sub Total de Compras</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-total"
         [(ngModel)]="total_compras"
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Credito Fiscal Mes Anterior</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-credt"
-        (ionFocus)="focusInputCredt('input-credt')"
-        (ionBlur)="unfocusInputCredt('input-credt')"
-        (ionChange)="getCredtMes($event.detail.value ?? '')"
+        (blur)="getCredtMes($event.target)"
+        (keyup.enter)="getCredtMes($event.target)"
         placeholder="00.00"
         [(ngModel)]="credito_mesanterior"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       Compras que representan el total<br />
@@ -98,26 +99,27 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-credtTot"
-        (ionFocus)="focusInputCredtTot('input-credtTot')"
-        (ionBlur)="unfocusInputCredtTot('input-credtTot')"
-        (ionChange)="calcTotalMesAnterior2($event.detail.value ?? '')"
+        (blur)="calcTotalMesAnterior2($event.target)"
+        (keyup.enter)="calcTotalMesAnterior2($event.target)"
         placeholder="00.00"
         [(ngModel)]="total_mesanteriorTot"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">IGV a Pagar</h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         placeholder="00.00"
         inputmode="numeric"
         id="input-venta"
         [(ngModel)]="igv_pagar"
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <div class="selector-tipo">
       <ion-label class="tipoRegi">Tipo de Regimen</ion-label>
@@ -129,8 +131,12 @@
         okText="Elegir"
         cancelText="Cancelar"
         (ionChange)="regimenChange($event)"
+        [maskito]="maskito"
       >
-        <ion-select-option value="default"><span>------------</span> Seleccione <span>------------</span></ion-select-option>
+        <ion-select-option value="default"
+          ><span>------------</span> Seleccione
+          <span>------------</span></ion-select-option
+        >
         <ion-select-option value="RER"
           >Régimen Especial de Renta</ion-select-option
         >

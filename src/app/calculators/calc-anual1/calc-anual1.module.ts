@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { CalcAnual1PageRoutingModule } from './calc-anual1-routing.module';
 
 import { CalcAnual1Page } from './calc-anual1.page';
+import { MaskitoDirective } from '@maskito/angular';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalcAnual1PageRoutingModule
+    CalcAnual1PageRoutingModule,
+    MaskitoDirective,
   ],
-  declarations: [CalcAnual1Page]
+  declarations: [CalcAnual1Page],
 })
 export class CalcAnual1PageModule {}

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  maskitoNumberOptionsGenerator,
+  maskitoParseNumber,
+} from '@maskito/kit';
 
 @Component({
   selector: 'app-calc-anual1',
@@ -6,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-anual1.page.scss'],
 })
 export class CalcAnual1Page implements OnInit {
+  protected readonly maskito = maskitoNumberOptionsGenerator({
+    decimalSeparator: '.',
+    thousandSeparator: ',',
+    precision: 2,
+  });
+
   venta: any;
   igv: any;
   total: any;
@@ -80,7 +90,7 @@ export class CalcAnual1Page implements OnInit {
   getVenta(valor: any) {
     if ((this.isTouchedVenta = true)) {
       console.log('Estoy calculando en venta');
-      this.venta = parseFloat(valor);
+      this.venta = maskitoParseNumber(valor.value);
       this.calcIgv();
       this.calcTotal();
       //Conditional to check if venta is NaN
@@ -96,7 +106,7 @@ export class CalcAnual1Page implements OnInit {
   getCompra(valor: any) {
     if ((this.isTouchedCompras = true)) {
       console.log('Estoy calculando en compras');
-      this.compras = parseFloat(valor);
+      this.compras = maskitoParseNumber(valor.value);
       // this.calcCredito();
       this.calcTotalCompras();
       this.calcIgvPagar();
@@ -113,7 +123,7 @@ export class CalcAnual1Page implements OnInit {
   getCredtMes(valor: any) {
     if ((this.isTouchedCredt = true)) {
       console.log('Estoy calculando en credmes');
-      this.credito_mesanterior = parseFloat(valor);
+      this.credito_mesanterior = maskitoParseNumber(valor.value);
       this.calcIgvPagar();
       this.calcTotalMesAnterior1();
       if (isNaN(this.credito_mesanterior)) {
@@ -138,7 +148,7 @@ export class CalcAnual1Page implements OnInit {
   calcTotalMesAnterior2(valor: any) {
     if ((this.isTouchedtotal_mesanteriorTot = true)) {
       console.log('Total numero mes anterior');
-      this.total_mesanteriorTot = parseFloat(valor);
+      this.total_mesanteriorTot = maskitoParseNumber(valor.value);
       var numIGV = this.total_mesanteriorTot * 0.18;
       numIGV = this.round(numIGV);
       this.credito_mesanterior = numIGV;
@@ -153,7 +163,7 @@ export class CalcAnual1Page implements OnInit {
   getIgv(valor: any) {
     if ((this.isTouchedIgv = true)) {
       console.log('Estoy calculando en igv');
-      this.igv = parseFloat(valor);
+      this.igv = maskitoParseNumber(valor.value);
       this.calcularValorBase2();
       this.calcTotal();
       //Conditional to check if venta is NaN
@@ -169,7 +179,7 @@ export class CalcAnual1Page implements OnInit {
   getTotal(valor: any) {
     if ((this.isTouchedTotal = true)) {
       console.log('Estoy calculando en total');
-      this.total = parseFloat(valor);
+      this.total = maskitoParseNumber(valor.value);
       this.calcularValorBase();
       this.calcIgv();
       //Conditional to check if venta is NaN
@@ -273,7 +283,6 @@ export class CalcAnual1Page implements OnInit {
   }
 
   calcCredito() {
-    console.log('❤❤❤');
     var credito = this.compras * 0.18;
     credito = this.round(credito);
     this.creditofiscal = credito;

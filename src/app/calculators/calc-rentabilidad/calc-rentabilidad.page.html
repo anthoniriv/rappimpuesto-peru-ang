@@ -65,14 +65,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-total"
         placeholder="00,00"
         [(ngModel)]="gananciaValue"
         readonly
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       SubTotal a Cobrar
@@ -88,14 +89,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="fixed">S/</ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-total"
         placeholder="00,00"
         [(ngModel)]="totalCobrarValue"
         readonly
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <ion-button expand="block" (click)="reset()"> Reiniciar </ion-button>
   </div>

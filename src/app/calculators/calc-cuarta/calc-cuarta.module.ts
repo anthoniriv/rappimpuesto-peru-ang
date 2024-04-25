@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { CalcCuartaPageRoutingModule } from './calc-cuarta-routing.module';
 
 import { CalcCuartaPage } from './calc-cuarta.page';
+import { MaskitoDirective } from '@maskito/angular';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalcCuartaPageRoutingModule
+    CalcCuartaPageRoutingModule,
+    MaskitoDirective,
   ],
-  declarations: [CalcCuartaPage]
+  declarations: [CalcCuartaPage],
 })
 export class CalcCuartaPageModule {}
