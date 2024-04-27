@@ -16,7 +16,7 @@
       ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="fixed">S/</ion-label>
+      <ion-label position="start" class="solesLabel">S/</ion-label>
       <input
         inputmode="numeric"
         id="input-venta"
@@ -40,7 +40,7 @@
       ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="fixed">%</ion-label>
+      <ion-label position="start" class="solesLabel">%</ion-label>
       <input
         inputmode="numeric"
         id="input-igv"
@@ -64,7 +64,7 @@
       ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="fixed">S/</ion-label>
+      <ion-label position="start" class="solesLabel">S/</ion-label>
       <input
         inputmode="numeric"
         id="input-total"
@@ -88,7 +88,7 @@
       ></ion-alert>
     </h2>
     <ion-item class="inputs" lines="none">
-      <ion-label position="fixed">S/</ion-label>
+      <ion-label position="start" class="solesLabel">S/</ion-label>
       <input
         inputmode="numeric"
         id="input-total"
@@ -99,6 +99,6 @@
         [maskito]="maskito"
       />
     </ion-item>
-    <ion-button expand="block" (click)="reset()"> Reiniciar </ion-button>
+    <ion-button class="reset" expand="block" (click)="reset()"> Reiniciar </ion-button>
   </div>
 </ion-content>
