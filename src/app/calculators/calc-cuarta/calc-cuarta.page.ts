@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  maskitoNumberOptionsGenerator,
+  maskitoParseNumber,
+} from '@maskito/kit';
 
 @Component({
   selector: 'app-calc-cuarta',
@@ -6,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calc-cuarta.page.scss'],
 })
 export class CalcCuartaPage implements OnInit {
+  protected readonly maskito = maskitoNumberOptionsGenerator({
+    decimalSeparator: '.',
+    thousandSeparator: ',',
+    precision: 2,
+  });
+
   venta: any;
   igv: any;
   total: any;
@@ -36,7 +46,7 @@ export class CalcCuartaPage implements OnInit {
   getVenta(valor: any) {
     if ((this.isTouchedVenta = true)) {
       console.log('Estoy calculando en venta');
-      this.venta = parseFloat(valor);
+      this.venta = maskitoParseNumber(valor.value);
       this.calcIgv();
       this.calcTotal();
       //Conditional to check if venta is NaN
@@ -52,7 +62,7 @@ export class CalcCuartaPage implements OnInit {
   getIgv(valor: any) {
     if ((this.isTouchedIgv = true)) {
       console.log('Estoy calculando en igv');
-      this.igv = parseFloat(valor);
+      this.igv = maskitoParseNumber(valor.value);
       this.calcularValorBase2();
       this.calcTotal();
       //Conditional to check if venta is NaN
@@ -68,7 +78,7 @@ export class CalcCuartaPage implements OnInit {
   getTotal(valor: any) {
     if ((this.isTouchedTotal = true)) {
       console.log('Estoy calculando en total');
-      this.total = parseFloat(valor);
+      this.total = maskitoParseNumber(valor.value);
       this.calcularValorBase();
       this.calcIgv();
       //Conditional to check if venta is NaN

@@ -18,13 +18,15 @@
 
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
-        (ionChange)="handleChangeCompras($event.detail.value ?? '')"
+        (keyup.enter)="handleChangeCompras($event.target)"
+        (blur)="handleChangeCompras($event.target)"
         [(ngModel)]="compras"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       Gastos
@@ -40,13 +42,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
-        (ionChange)="handleChangeGastos($event.detail.value ?? '')"
+        (keyup.enter)="handleChangeGastos($event.target)"
+        (blur)="handleChangeGastos($event.target)"
         [(ngModel)]="gastos"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       Ganancia 1
@@ -62,13 +66,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
-        (ionChange)="handleChangeGanancia1($event.detail.value ?? '')"
+        (keyup.enter)="handleChangeGanancia1($event.target)"
+        (blur)="handleChangeGanancia1($event.target)"
         [(ngModel)]="ganancia1"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       IGV
@@ -84,14 +90,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
         [(ngModel)]="igv"
         readonly
         disabled="true"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       Precio
@@ -107,14 +114,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
         [(ngModel)]="precio"
         readonly
         disabled="true"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       Ganancia 2
@@ -130,14 +138,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
         [(ngModel)]="ganancia2"
         readonly
         disabled="true"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">
       IGV Final
@@ -153,14 +162,15 @@
     </h2>
     <ion-item class="inputs" lines="none">
       <ion-label position="start" class="solesLabel"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         position="floating"
         [(ngModel)]="igvfinal"
         readonly
         disabled="true"
         placeholder="00.00"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
   </div>
 

@@ -7,51 +7,51 @@
     <h2 class="labels">Total de Recibos por Honorarios</h2>
     <ion-item class="inputs" lines="none">
       <ion-label class="soles" position="start"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-venta"
         class="numero"
-        (ionFocus)="focusInputVenta('input-venta')"
-        (ionBlur)="unfocusInputVenta('input-venta')"
-        (ionInput)="getVenta($event.target.value)"
         placeholder="00,00"
         [(ngModel)]="venta"
-      ></ion-input>
+        (blur)="getVenta($event.target)"
+        (keyup.enter)="getVenta($event.target)"
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Retencion</h2>
     <ion-item class="inputs" lines="none">
       <ion-label class="soles" position="start"> S/ </ion-label>
-      <ion-input
+      <input
         class="numero"
         inputmode="numeric"
         id="input-igv"
-        (ionFocus)="focusInputIgv('input-igv')"
-        (ionBlur)="unfocusInputIgv('input-igv')"
-        (ionInput)="getIgv($event.target.value)"
         placeholder="00,00"
         [(ngModel)]="igv"
+        (blur)="getIgv($event.target)"
+        (keyup.enter)="getIgv($event.target)"
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <h2 class="labels">Neto a pagar</h2>
     <ion-item class="inputs" lines="none">
       <ion-label class="soles" position="start"> S/ </ion-label>
-      <ion-input
+      <input
         inputmode="numeric"
         id="input-total"
         class="numero"
-        (ionFocus)="focusInputTotal('input-total')"
-        (ionBlur)="unfocusInputTotal('input-total')"
-        (ionInput)="getTotal($event.target.value)"
-        placeholder="00,00"
         [(ngModel)]="total"
+        (blur)="getTotal($event.target)"
+        (keyup.enter)="getTotal($event.target)"
+        placeholder="00,00"
         disabled="true"
-      ></ion-input>
+        [maskito]="maskito"
+      />
     </ion-item>
     <div class="select1" lines="none">
       <ion-label class="texto">Hice mi suspension de renta cuarta.</ion-label>
       <ion-checkbox
-      class="box"
+        class="box"
         slot="end"
         color="primary"
         (ionChange)="cuartaCheck($event)"

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { maskitoNumberOptionsGenerator, maskitoParseNumber } from '@maskito/kit';
+import {
+  maskitoNumberOptionsGenerator,
+  maskitoParseNumber,
+} from '@maskito/kit';
 
 @Component({
   selector: 'app-calc-rentabilidad',
@@ -49,8 +52,8 @@ export class CalcRentabilidadPage implements OnInit {
       console.log('Division:', division);
       const ganancia = costoFloat / division;
       console.log('ganancia value:', ganancia);
-      this.totalCobrarValue = ganancia.toFixed(2).replace('.', ',');
-      this.gananciaValue = (ganancia - costoFloat).toFixed(2).replace('.', ',');
+      this.totalCobrarValue = ganancia.toFixed(2);
+      this.gananciaValue = (ganancia - costoFloat).toFixed(2);
       console.log('Total value:', this.gananciaValue);
     } else {
       this.totalCobrarValue = '';
@@ -63,6 +66,7 @@ export class CalcRentabilidadPage implements OnInit {
     this.costoValue = '';
     this.porcentajeGanarValue = '';
     this.gananciaValue = '';
+    this.totalCobrarValue = '';
     console.log('Reset button clicked');
   }
 

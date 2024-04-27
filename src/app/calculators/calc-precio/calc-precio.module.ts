@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { CalcPrecioPageRoutingModule } from './calc-precio-routing.module';
 
 import { CalcPrecioPage } from './calc-precio.page';
+import { MaskitoDirective } from '@maskito/angular';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalcPrecioPageRoutingModule
+    CalcPrecioPageRoutingModule,
+    MaskitoDirective,
   ],
-  declarations: [CalcPrecioPage]
+  declarations: [CalcPrecioPage],
 })
 export class CalcPrecioPageModule {}
