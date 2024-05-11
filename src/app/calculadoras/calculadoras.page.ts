@@ -18,12 +18,10 @@ export class CalculadorasPage implements OnInit {
 
   categoria_cambiada($event: { detail: { checked: boolean; }; }){
     this.categorias = $event.detail.checked;
-    console.log(this.categorias);
   }
 
   tipo_tercera_cambiada($event: { detail: { checked: boolean; }; }){
     this.tipotercera = $event.detail.checked;
     this.disabled = this.tipotercera;
-    console.log(this.tipotercera);
   }
 }

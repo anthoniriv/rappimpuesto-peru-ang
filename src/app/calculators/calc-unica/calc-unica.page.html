@@ -24,9 +24,9 @@
         id="input-igv"
         placeholder="00,00"
         [(ngModel)]="igv"
-        readonly
-        disabled="true"
         [maskito]="maskito"
+        (keyup.enter)="getIgv($event.target)"
+        (blur)="getIgv($event.target)"
       />
     </ion-item>
     <h2 class="labels">Total de Ventas</h2>
@@ -37,9 +37,9 @@
         id="input-total"
         placeholder="00,00"
         [(ngModel)]="total"
-        readonly
-        disabled="true"
         [maskito]="maskito"
+        (keyup.enter)="getTotal($event.target)"
+        (blur)="getTotal($event.target)"
       />
     </ion-item>
     <ion-button expand="block" (click)="reset()"> Reiniciar </ion-button>

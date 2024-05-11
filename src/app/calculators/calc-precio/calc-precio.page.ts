@@ -71,36 +71,24 @@ export class CalcPrecioPage implements OnInit {
       !isNaN(maskitoParseNumber(gastos)) &&
       !isNaN(maskitoParseNumber(ganancia1))
     ) {
-      console.log('Calculando IGV', compras, gastos, ganancia1);
-
       const compras1 = maskitoParseNumber(compras);
       const gastos1 = maskitoParseNumber(gastos);
       const ganancia11 = maskitoParseNumber(ganancia1);
 
-      console.log('valores', compras1, gastos1, ganancia1);
       const total = compras1 + gastos1 + ganancia11;
-      console.log('Total: ' + total);
       const igvCalculado = total * 0.18;
       this.igv = igvCalculado.toFixed(2);
-      console.log('IGV: ' + this.igv);
 
       const precioCalculado = total + igvCalculado;
       this.precio = precioCalculado.toFixed(2);
-      console.log('Precio: ' + this.precio);
 
       const creditoFiscalBase = compras1 / 1.18;
-      console.log('Credito Fiscal Base: ' + creditoFiscalBase);
       const creditoFiscal = compras1 - creditoFiscalBase;
-      console.log('Credito Fiscal: ' + creditoFiscal);
       let ganancia2Calculada = creditoFiscal;
-      //convertir en positivo si es negativo
       if (ganancia2Calculada < 0) {
         ganancia2Calculada = ganancia2Calculada * -1;
       }
       this.ganancia2 = ganancia2Calculada.toFixed(2);
-      console.log('Precio: ' + this.precio);
-      console.log('Ganancia2: ' + this.ganancia2);
-      //IGV FINAL let ganancia2Calculada = creditoFiscal - parseFloat(this.igv);
       let igvFinalCalculada = creditoFiscal - this.igv;
       if (igvFinalCalculada < 0) {
         igvFinalCalculada = igvFinalCalculada * -1;
@@ -125,7 +113,5 @@ export class CalcPrecioPage implements OnInit {
   }
 
   ngOnInit() {
-    // Initialization code here
-    console.log('CalcPrecioPage initialized');
   }
 }

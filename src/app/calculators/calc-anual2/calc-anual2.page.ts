@@ -31,7 +31,6 @@ export class CalcAnual2Page implements OnInit {
 
   getVenta(valor: any) {
     if ((this.isTouchedVenta = true)) {
-      console.log('Estoy calculando en venta');
       this.venta = parseFloat(valor);
       this.calcIgv();
       this.calcTotal();
@@ -41,13 +40,11 @@ export class CalcAnual2Page implements OnInit {
         this.total = '';
         this.venta = '';
       }
-      console.log(this.venta);
     }
   }
 
   getIgv(valor: any) {
     if ((this.isTouchedIgv = true)) {
-      console.log('Estoy calculando en igv');
       this.igv = parseFloat(valor);
       this.calcularValorBase2();
       this.calcTotal();
@@ -57,13 +54,11 @@ export class CalcAnual2Page implements OnInit {
         this.total = '';
         this.igv = '';
       }
-      console.log(this.igv);
     }
   }
 
   getTotal(valor: any) {
     if ((this.isTouchedTotal = true)) {
-      console.log('Estoy calculando en total');
       this.total = parseFloat(valor);
       this.calcularValorBase();
       this.calcIgv();
@@ -73,7 +68,6 @@ export class CalcAnual2Page implements OnInit {
         this.igv = '';
         this.total = '';
       }
-      console.log(this.total);
     }
   }
 
@@ -82,7 +76,6 @@ export class CalcAnual2Page implements OnInit {
     this.isTouchedIgv = false;
     this.isTouchedTotal = false;
     this.isTouchedVenta = true;
-    console.log(`${this.isTouchedVenta} es verdadero ahora`);
     const element = document.getElementById(`${input}`);
     if (element !== null) {
       element.style.border = 'solid 2px #203680';
@@ -93,7 +86,6 @@ export class CalcAnual2Page implements OnInit {
     this.isTouchedIgv = true;
     this.isTouchedTotal = false;
     this.isTouchedVenta = false;
-    console.log(`${this.isTouchedIgv} es verdadero ahora`);
     const element = document.getElementById(`${input}`);
     if (element !== null) {
       element.style.border = 'solid 2px #203680';
@@ -104,7 +96,6 @@ export class CalcAnual2Page implements OnInit {
     this.isTouchedTotal = true;
     this.isTouchedVenta = false;
     this.isTouchedIgv = false;
-    console.log(`${this.isTouchedTotal} es verdadero ahora`);
     const element = document.getElementById(`${input}`);
     if (element !== null) {
       element.style.border = 'solid 2px #203680';
@@ -113,7 +104,6 @@ export class CalcAnual2Page implements OnInit {
 
   unfocusInputVenta(input: any) {
     this.isTouchedVenta = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
     const element = document.getElementById(`${input}`);
     if (element !== null) {
       element.style.border = 'solid 1px #20368038';
@@ -122,7 +112,6 @@ export class CalcAnual2Page implements OnInit {
 
   unfocusInputIgv(input: any) {
     this.isTouchedIgv = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
     const element = document.getElementById(`${input}`);
     if (element !== null) {
       element.style.border = 'solid 1px #20368038';
@@ -130,7 +119,6 @@ export class CalcAnual2Page implements OnInit {
   }
   unfocusInputTotal(input: any) {
     this.isTouchedTotal = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
     const element = document.getElementById(`${input}`);
     if (element !== null) {
       element.style.border = 'solid 1px #20368038';

@@ -45,7 +45,6 @@ export class CalcCuartaPage implements OnInit {
 
   getVenta(valor: any) {
     if ((this.isTouchedVenta = true)) {
-      console.log('Estoy calculando en venta');
       this.venta = maskitoParseNumber(valor.value);
       this.calcIgv();
       this.calcTotal();
@@ -55,13 +54,11 @@ export class CalcCuartaPage implements OnInit {
         this.total = '';
         this.venta = '';
       }
-      console.log(this.venta);
     }
   }
 
   getIgv(valor: any) {
     if ((this.isTouchedIgv = true)) {
-      console.log('Estoy calculando en igv');
       this.igv = maskitoParseNumber(valor.value);
       this.calcularValorBase2();
       this.calcTotal();
@@ -71,13 +68,11 @@ export class CalcCuartaPage implements OnInit {
         this.total = '';
         this.igv = '';
       }
-      console.log(this.igv);
     }
   }
 
   getTotal(valor: any) {
     if ((this.isTouchedTotal = true)) {
-      console.log('Estoy calculando en total');
       this.total = maskitoParseNumber(valor.value);
       this.calcularValorBase();
       this.calcIgv();
@@ -87,7 +82,6 @@ export class CalcCuartaPage implements OnInit {
         this.igv = '';
         this.total = '';
       }
-      console.log(this.total);
     }
   }
 
@@ -96,41 +90,29 @@ export class CalcCuartaPage implements OnInit {
     this.isTouchedIgv = false;
     this.isTouchedTotal = false;
     this.isTouchedVenta = true;
-    console.log(`${this.isTouchedVenta} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   focusInputIgv(input: any) {
     this.isTouchedIgv = true;
     this.isTouchedTotal = false;
     this.isTouchedVenta = false;
-    console.log(`${this.isTouchedIgv} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   focusInputTotal(input: any) {
     this.isTouchedTotal = true;
     this.isTouchedVenta = false;
     this.isTouchedIgv = false;
-    console.log(`${this.isTouchedTotal} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   unfocusInputVenta(input: any) {
     this.isTouchedVenta = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
 
   unfocusInputIgv(input: any) {
     this.isTouchedIgv = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
   unfocusInputTotal(input: any) {
     this.isTouchedTotal = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
   //Calculator Functions
   calcIgv() {
@@ -177,7 +159,6 @@ export class CalcCuartaPage implements OnInit {
         this.changeIGV();
         this.calcTotal();
       }
-      console.log('Estoy en true');
     }
     if (this.checked2 == true && this.checked1 == true) {
       this.calcIgv();
@@ -223,10 +204,8 @@ export class CalcCuartaPage implements OnInit {
       this.calcTotal();
     }
     if (this.checked2 == true && this.checked1 == true) {
-      console.log('Estamos en true y true');
     }
     if (this.checked2 == false && this.checked1 == true) {
-      console.log('Estamos en false y true');
     }
     if (this.checked2 == false && this.checked1 == false) {
       if (this.venta > 1500) {

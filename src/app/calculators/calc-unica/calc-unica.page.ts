@@ -42,23 +42,22 @@ export class CalcUnicaPage implements OnInit {
   }
 
   getVenta(valor: any) {
-    //borrar la coma
-    console.log('getVenta', valor.value);
     this.venta = maskitoParseNumber(valor.value);
-    console.log('getVenta', valor);
-    console.log('getVenta', this.venta);
     this.calculateFigures();
     this.focusInputVenta();
   }
 
   getIgv(valor: any) {
-    // If IGV is manually changed, we might not want to recalculate it automatically.
-    this.igv = Number(valor);
+    this.igv = maskitoParseNumber(valor.value);
+    this.calcularValorBase2();
+    this.calculateFigures();
     this.focusInputIgv();
   }
 
   getTotal(valor: any) {
-    this.total = Number(valor);
+    this.total = maskitoParseNumber(valor.value);
+    this.calcularValorBase();
+    this.calcIgv();
     this.focusInputTotal();
   }
 
@@ -76,14 +75,29 @@ export class CalcUnicaPage implements OnInit {
   }
 
   calculateFigures() {
-    //this.venta recibe 10 000 000 conviertelo a 10000000
     const ventaNumber = this.venta;
-    console.log('calculateFigures', ventaNumber);
-    // Calculate IGV based on the venta if venta input is the last touched.
     const igvCalculated = ventaNumber * 0.18;
     this.igv = igvCalculated.toFixed(2);
     const calculo = ventaNumber + igvCalculated;
     this.total = calculo.toFixed(2);
+  }
+
+  calcIgv() {
+    let igv = this.venta * 0.18;
+    igv = Math.round(igv * 100) / 100;
+    this.igv = igv;
+  }
+
+  calcularValorBase() {
+    let valorBase = this.total / 1.18;
+    valorBase = Math.round(valorBase * 100) / 100;
+    this.venta = valorBase.toString();
+  }
+
+  calcularValorBase2() {
+    let valorBase = (100 * this.igv) / 18;
+    valorBase = Math.round(valorBase * 100) / 100;
+    this.venta = valorBase;
   }
 
   focusInputVenta() {

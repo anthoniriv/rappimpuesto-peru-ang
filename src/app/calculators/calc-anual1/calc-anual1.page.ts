@@ -89,7 +89,6 @@ export class CalcAnual1Page implements OnInit {
 
   getVenta(valor: any) {
     if ((this.isTouchedVenta = true)) {
-      console.log('Estoy calculando en venta');
       this.venta = maskitoParseNumber(valor.value);
       this.calcIgv();
       this.calcTotal();
@@ -99,13 +98,11 @@ export class CalcAnual1Page implements OnInit {
         this.total = '';
         this.venta = '';
       }
-      console.log(this.venta);
     }
   }
 
   getCompra(valor: any) {
     if ((this.isTouchedCompras = true)) {
-      console.log('Estoy calculando en compras');
       this.compras = maskitoParseNumber(valor.value);
       // this.calcCredito();
       this.calcTotalCompras();
@@ -116,13 +113,11 @@ export class CalcAnual1Page implements OnInit {
         this.total_compras = '';
         this.compras = '';
       }
-      console.log(this.compras);
     }
   }
 
   getCredtMes(valor: any) {
     if ((this.isTouchedCredt = true)) {
-      console.log('Estoy calculando en credmes');
       this.credito_mesanterior = maskitoParseNumber(valor.value);
       this.calcIgvPagar();
       this.calcTotalMesAnterior1();
@@ -130,24 +125,20 @@ export class CalcAnual1Page implements OnInit {
         this.credito_mesanterior = '';
         this.total_mesanteriorTot = '';
       }
-      console.log(this.credito_mesanterior);
     }
   }
 
   calcTotalMesAnterior1() {
     if ((this.isTouchedCredt = true)) {
-      console.log('Total numero mes anterior');
       var numTotal = (this.credito_mesanterior * 100) / 18;
       numTotal = numTotal + this.credito_mesanterior;
       numTotal = this.round(numTotal);
       this.total_mesanteriorTot = numTotal;
-      console.log(this.total_mesanteriorTot);
     }
   }
 
   calcTotalMesAnterior2(valor: any) {
     if ((this.isTouchedtotal_mesanteriorTot = true)) {
-      console.log('Total numero mes anterior');
       this.total_mesanteriorTot = maskitoParseNumber(valor.value);
       var numIGV = this.total_mesanteriorTot * 0.18;
       numIGV = this.round(numIGV);
@@ -157,12 +148,10 @@ export class CalcAnual1Page implements OnInit {
         this.credito_mesanterior = '';
         this.total_mesanteriorTot = '';
       }
-      console.log(this.credito_mesanterior);
     }
   }
   getIgv(valor: any) {
     if ((this.isTouchedIgv = true)) {
-      console.log('Estoy calculando en igv');
       this.igv = maskitoParseNumber(valor.value);
       this.calcularValorBase2();
       this.calcTotal();
@@ -172,13 +161,11 @@ export class CalcAnual1Page implements OnInit {
         this.total = '';
         this.igv = '';
       }
-      console.log(this.igv);
     }
   }
 
   getTotal(valor: any) {
     if ((this.isTouchedTotal = true)) {
-      console.log('Estoy calculando en total');
       this.total = maskitoParseNumber(valor.value);
       this.calcularValorBase();
       this.calcIgv();
@@ -188,7 +175,6 @@ export class CalcAnual1Page implements OnInit {
         this.igv = '';
         this.total = '';
       }
-      console.log(this.total);
     }
   }
   //Change Color Functions
@@ -196,24 +182,18 @@ export class CalcAnual1Page implements OnInit {
     this.isTouchedIgv = false;
     this.isTouchedTotal = false;
     this.isTouchedVenta = true;
-    console.log(`${this.isTouchedVenta} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   focusInputIgv(input: any) {
     this.isTouchedIgv = true;
     this.isTouchedTotal = false;
     this.isTouchedVenta = false;
-    console.log(`${this.isTouchedIgv} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   focusInputTotal(input: any) {
     this.isTouchedTotal = true;
     this.isTouchedVenta = false;
     this.isTouchedIgv = false;
-    console.log(`${this.isTouchedTotal} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   focusInputCompras(input: any) {
@@ -221,8 +201,6 @@ export class CalcAnual1Page implements OnInit {
     this.isTouchedVenta = false;
     this.isTouchedIgv = false;
     this.isTouchedCompras = true;
-    console.log(`${this.isTouchedTotal} es verdadero ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 2px #203680";
   }
 
   focusInputCredt(input: any) {
@@ -246,36 +224,25 @@ export class CalcAnual1Page implements OnInit {
 
   unfocusInputVenta(input: any) {
     this.isTouchedVenta = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
 
   unfocusInputIgv(input: any) {
     this.isTouchedIgv = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
   unfocusInputTotal(input: any) {
     this.isTouchedTotal = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
   unfocusInputCompras(input: any) {
     this.isTouchedCompras = false;
-    console.log(`${this.isTouchedVenta} es falso ahora`);
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
   unfocusInputCredt(input: any) {
     this.isTouchedCredt = false;
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
 
   unfocusInputCredtTot(input: any) {
     this.total_mesanteriorTot = false;
-    // document.getElementById(`${input}`).style.border = "solid 1px #20368038";
   }
 
-  //Calculator Functions
   calcIgv() {
     var igv = this.venta * 0.18;
     igv = this.round(igv);
@@ -291,7 +258,6 @@ export class CalcAnual1Page implements OnInit {
   calcTotal() {
     var total = this.venta + this.igv;
     this.total = total.toString();
-    // this.total = this.venta += this.igv;
   }
 
   calcTotalCompras() {
@@ -300,7 +266,6 @@ export class CalcAnual1Page implements OnInit {
     this.creditofiscal = this.round(creditoFiscal1);
     comprasTotal = this.round(comprasTotal);
     this.total_compras = comprasTotal.toString();
-    // this.total = this.venta += this.igv;
   }
 
   calcularValorBase() {
@@ -365,7 +330,6 @@ export class CalcAnual1Page implements OnInit {
 
   regimenChange($event: any) {
     this.selected = $event.target.value;
-    console.log(this.selected);
     if (this.selected == 'RER') {
       this.regimen = this.get1_5();
     }

@@ -25,13 +25,11 @@ export class CalcRentabilidadPage implements OnInit {
   handleCostoValue(value: any) {
     this.costoValue = maskitoParseNumber(value.value);
     this.handleGananciaValue(this.costoValue, this.porcentajeGanarValue);
-    console.log('Venta value:', value.value);
   }
 
   handlePorcentajeGanarValue(value: any) {
     this.porcentajeGanarValue = maskitoParseNumber(value.value);
     this.handleGananciaValue(this.costoValue, this.porcentajeGanarValue);
-    console.log('IGV value:', value.value);
   }
 
   handleGananciaValue(costo: any, porcentajeGanar: any) {
@@ -44,21 +42,14 @@ export class CalcRentabilidadPage implements OnInit {
       porcentajeGanar !== '' &&
       !isNaN(porcentajeGanarFloat)
     ) {
-      console.log('Costo:', costoFloat);
-      console.log('Porcentaje de ganancia:', porcentajeGanarFloat);
       let porcentaje = porcentajeGanarFloat / 100;
-      console.log('Porcentaje:', porcentaje);
       let division = 1 - porcentaje;
-      console.log('Division:', division);
       const ganancia = costoFloat / division;
-      console.log('ganancia value:', ganancia);
       this.totalCobrarValue = ganancia.toFixed(2);
       this.gananciaValue = (ganancia - costoFloat).toFixed(2);
-      console.log('Total value:', this.gananciaValue);
     } else {
       this.totalCobrarValue = '';
       this.gananciaValue = '';
-      console.log('Costo y porcentaje de ganancia deben ser números válidos.');
     }
   }
 
@@ -67,11 +58,9 @@ export class CalcRentabilidadPage implements OnInit {
     this.porcentajeGanarValue = '';
     this.gananciaValue = '';
     this.totalCobrarValue = '';
-    console.log('Reset button clicked');
   }
 
   ngOnInit() {
     // Initialization code here
-    console.log('CalcRentabilidadPage initialized');
   }
 }

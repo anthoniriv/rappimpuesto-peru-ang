@@ -141,7 +141,6 @@ export class CronogramaPage implements OnInit {
       this.rucNumber = id;
       this.savedRuc = false;
     }
-    console.log(this.rucHere);
   }
 
   async mainFunction() {
@@ -163,7 +162,6 @@ export class CronogramaPage implements OnInit {
     });
     return await modal.present();
     */
-    console.log('Modal');
   }
 
   //Function to plus a string into anothor string
@@ -193,17 +191,14 @@ export class CronogramaPage implements OnInit {
     if (this.rucHere.rucNumber) {
       var ruc = this.rucHere.rucNumber;
       var lastDigit = ruc.substring(10, 11);
-      console.log(lastDigit);
       return lastDigit;
     } else {
       var ruc = this.rucHere;
       var lastDigit = ruc.substring(10, 11);
-      console.log(lastDigit);
       return lastDigit;
     }
   }
 
-  //Function to us plusString function into all FECHA values of fechas array depending on the last digit of rucHERE.ruc
   editFechaAll() {
     this.getLastDigit();
     if (this.getLastDigit() == '0') {
